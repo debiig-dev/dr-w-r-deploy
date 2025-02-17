@@ -1,21 +1,41 @@
 (function () {
-  function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+  function _classCallCheck(a, n) { if (!(a instanceof n)) throw new TypeError("Cannot call a class as a function"); }
 
-  function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+  function _defineProperties(e, r) { for (var t = 0; t < r.length; t++) { var o = r[t]; o.enumerable = o.enumerable || !1, o.configurable = !0, "value" in o && (o.writable = !0), Object.defineProperty(e, _toPropertyKey(o.key), o); } }
 
-  function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+  function _createClass(e, r, t) { return r && _defineProperties(e.prototype, r), t && _defineProperties(e, t), Object.defineProperty(e, "prototype", { writable: !1 }), e; }
+
+  function _toPropertyKey(t) { var i = _toPrimitive(t, "string"); return "symbol" == typeof i ? i : i + ""; }
+
+  function _toPrimitive(t, r) { if ("object" != typeof t || !t) return t; var e = t[Symbol.toPrimitive]; if (void 0 !== e) { var i = e.call(t, r || "default"); if ("object" != typeof i) return i; throw new TypeError("@@toPrimitive must return a primitive value."); } return ("string" === r ? String : Number)(t); }
 
   (window["webpackJsonp"] = window["webpackJsonp"] || []).push([["main"], {
     /***/
-    0: function _(module, exports, __webpack_require__) {
+    0:
+    /*!***************************!*\
+      !*** multi ./src/main.ts ***!
+      \***************************/
+
+    /*! no static exports found */
+
+    /***/
+    function _(module, exports, __webpack_require__) {
       module.exports = __webpack_require__(
-      /*! C:\Users\DeboraGuardado\Documents\2024\dr\doctor-w-r\src\main.ts */
+      /*! /Users/deboraguardado/Documents/GitHub/doctor-w-r/src/main.ts */
       "zUnb");
       /***/
     },
 
     /***/
-    "AytR": function AytR(module, __webpack_exports__, __webpack_require__) {
+    "AytR":
+    /*!*****************************************!*\
+      !*** ./src/environments/environment.ts ***!
+      \*****************************************/
+
+    /*! exports provided: environment */
+
+    /***/
+    function AytR(module, __webpack_exports__, __webpack_require__) {
       "use strict";
 
       __webpack_require__.r(__webpack_exports__);
@@ -46,7 +66,15 @@
     },
 
     /***/
-    "Ss9G": function Ss9G(module, __webpack_exports__, __webpack_require__) {
+    "Ss9G":
+    /*!*****************************************!*\
+      !*** ./src/app/app.module.ngfactory.js ***!
+      \*****************************************/
+
+    /*! exports provided: AppModuleNgFactory */
+
+    /***/
+    function Ss9G(module, __webpack_exports__, __webpack_require__) {
       "use strict";
 
       __webpack_require__.r(__webpack_exports__);
@@ -222,7 +250,15 @@
     },
 
     /***/
-    "Sy1n": function Sy1n(module, __webpack_exports__, __webpack_require__) {
+    "Sy1n":
+    /*!**********************************!*\
+      !*** ./src/app/app.component.ts ***!
+      \**********************************/
+
+    /*! exports provided: AppComponent */
+
+    /***/
+    function Sy1n(module, __webpack_exports__, __webpack_require__) {
       "use strict";
 
       __webpack_require__.r(__webpack_exports__);
@@ -234,20 +270,28 @@
       });
 
       var AppComponent = /*#__PURE__*/function () {
-        function AppComponent(titleService, breadcrumbService) {
+        function AppComponent(titleService, breadcrumbService, meta) {
           _classCallCheck(this, AppComponent);
 
           this.titleService = titleService;
           this.breadcrumbService = breadcrumbService;
+          this.meta = meta;
         }
 
-        _createClass(AppComponent, [{
+        return _createClass(AppComponent, [{
           key: "ngOnInit",
           value: function ngOnInit() {
             var _this = this;
 
             this.breadcrumbService.breadcrumbChanged.subscribe(function (crumbs) {
+              console.log(crumbs);
+
               _this.titleService.setTitle(_this.createTitle(crumbs));
+
+              _this.meta.updateTag({
+                name: 'description',
+                content: _this.createDescription(crumbs)
+              });
             });
           }
         }, {
@@ -271,6 +315,25 @@
             return "".concat(title).concat(routeTitle);
           }
         }, {
+          key: "createDescription",
+          value: function createDescription(routesCollection) {
+            if (routesCollection.length > 0) {
+              return routesCollection.map(function (route) {
+                var _a;
+
+                var dataRoute = (_a = route.route) === null || _a === void 0 ? void 0 : _a.data;
+
+                if (dataRoute) {
+                  return dataRoute === null || dataRoute === void 0 ? void 0 : dataRoute.description;
+                } else {
+                  return "";
+                }
+              })[0];
+            } else {
+              return "Bienvenido al sitio web del Dr. William Raymundo Brindo atención médica integral con servicios de ingresos hospitalarios, electrocardiograma, terapia respiratoria, consulta a domicilio, certificaciones médicas y cuidado especializado para el adulto mayor**. Mi compromiso es ofrecer una atención profesional, cercana y de calidad para el bienestar de nuestros pacientes. Agenda tu cita hoy y recibe el mejor cuidado médico.";
+            }
+          }
+        }, {
           key: "titlesToString",
           value: function titlesToString(titles) {
             return titles.reduce(function (prev, curr) {
@@ -278,15 +341,21 @@
             }, '');
           }
         }]);
-
-        return AppComponent;
       }();
       /***/
 
     },
 
     /***/
-    "ZAI4": function ZAI4(module, __webpack_exports__, __webpack_require__) {
+    "ZAI4":
+    /*!*******************************!*\
+      !*** ./src/app/app.module.ts ***!
+      \*******************************/
+
+    /*! exports provided: AppModule */
+
+    /***/
+    function ZAI4(module, __webpack_exports__, __webpack_require__) {
       "use strict";
 
       __webpack_require__.r(__webpack_exports__);
@@ -297,15 +366,23 @@
         return AppModule;
       });
 
-      var AppModule = function AppModule() {
+      var AppModule = /*#__PURE__*/_createClass(function AppModule() {
         _classCallCheck(this, AppModule);
-      };
+      });
       /***/
 
     },
 
     /***/
-    "lwNt": function lwNt(module, __webpack_exports__, __webpack_require__) {
+    "lwNt":
+    /*!***************************************************!*\
+      !*** ./src/app/app.component.css.shim.ngstyle.js ***!
+      \***************************************************/
+
+    /*! exports provided: styles */
+
+    /***/
+    function lwNt(module, __webpack_exports__, __webpack_require__) {
       "use strict";
 
       __webpack_require__.r(__webpack_exports__);
@@ -328,7 +405,15 @@
     },
 
     /***/
-    "vY5A": function vY5A(module, __webpack_exports__, __webpack_require__) {
+    "vY5A":
+    /*!***************************************!*\
+      !*** ./src/app/app-routing.module.ts ***!
+      \***************************************/
+
+    /*! exports provided: AppRoutingModule, ɵ0, ɵ1, ɵ2, ɵ3, ɵ4, ɵ5, ɵ6, ɵ7, ɵ8, ɵ9, ɵ10, ɵ11, ɵ12, ɵ13 */
+
+    /***/
+    function vY5A(module, __webpack_exports__, __webpack_require__) {
       "use strict";
 
       __webpack_require__.r(__webpack_exports__);
@@ -433,7 +518,8 @@
         });
       },
           ɵ1 = {
-        breadcrumb: "Inicio"
+        breadcrumb: "Inicio",
+        description: "Bienvenido al sitio web del Dr. William Raymundo Brindo atención médica integral con servicios de ingresos hospitalarios, electrocardiograma, terapia respiratoria, consulta a domicilio, certificaciones médicas y cuidado especializado para el adulto mayor**. Mi compromiso es ofrecer una atención profesional, cercana y de calidad para el bienestar de nuestros pacientes. Agenda tu cita hoy y recibe el mejor cuidado médico."
       },
           ɵ2 = function ɵ2() {
         return Promise.all(
@@ -445,7 +531,8 @@
         });
       },
           ɵ3 = {
-        breadcrumb: "Servicios"
+        breadcrumb: "Servicios",
+        description: "Bienvenido al sitio web del Dr. William Raymundo Brindo atención médica integral con servicios de ingresos hospitalarios, electrocardiograma, terapia respiratoria, consulta a domicilio, certificaciones médicas y cuidado especializado para el adulto mayor**. Mi compromiso es ofrecer una atención profesional, cercana y de calidad para el bienestar de nuestros pacientes. Agenda tu cita hoy y recibe el mejor cuidado médico."
       },
           ɵ4 = function ɵ4() {
         return Promise.all(
@@ -457,7 +544,8 @@
         });
       },
           ɵ5 = {
-        breadcrumb: "Service Details"
+        breadcrumb: "Service Details",
+        description: "Bienvenido al sitio web del Dr. William Raymundo Brindo atención médica integral con servicios de ingresos hospitalarios, electrocardiograma, terapia respiratoria, consulta a domicilio, certificaciones médicas y cuidado especializado para el adulto mayor**. Mi compromiso es ofrecer una atención profesional, cercana y de calidad para el bienestar de nuestros pacientes. Agenda tu cita hoy y recibe el mejor cuidado médico."
       },
           ɵ6 = function ɵ6() {
         return Promise.all(
@@ -469,7 +557,8 @@
         });
       },
           ɵ7 = {
-        breadcrumb: "Sobre Mi"
+        breadcrumb: "Sobre Mi",
+        description: "Bienvenido al sitio web del Dr. William Raymundo Brindo atención médica integral con servicios de ingresos hospitalarios, electrocardiograma, terapia respiratoria, consulta a domicilio, certificaciones médicas y cuidado especializado para el adulto mayor**. Mi compromiso es ofrecer una atención profesional, cercana y de calidad para el bienestar de nuestros pacientes. Agenda tu cita hoy y recibe el mejor cuidado médico."
       },
           ɵ8 = function ɵ8() {
         return Promise.all(
@@ -481,7 +570,8 @@
         });
       },
           ɵ9 = {
-        breadcrumb: "Contacto"
+        breadcrumb: "Contacto",
+        description: "Bienvenido al sitio web del Dr. William Raymundo Brindo atención médica integral con servicios de ingresos hospitalarios, electrocardiograma, terapia respiratoria, consulta a domicilio, certificaciones médicas y cuidado especializado para el adulto mayor**. Mi compromiso es ofrecer una atención profesional, cercana y de calidad para el bienestar de nuestros pacientes. Agenda tu cita hoy y recibe el mejor cuidado médico."
       },
           ɵ10 = function ɵ10() {
         return Promise.all(
@@ -493,7 +583,8 @@
         });
       },
           ɵ11 = {
-        breadcrumb: "Error 404"
+        breadcrumb: "Error 404",
+        description: "Bienvenido al sitio web del Dr. William Raymundo Brindo atención médica integral con servicios de ingresos hospitalarios, electrocardiograma, terapia respiratoria, consulta a domicilio, certificaciones médicas y cuidado especializado para el adulto mayor**. Mi compromiso es ofrecer una atención profesional, cercana y de calidad para el bienestar de nuestros pacientes. Agenda tu cita hoy y recibe el mejor cuidado médico."
       },
           ɵ12 = function ɵ12() {
         return Promise.all(
@@ -505,7 +596,8 @@
         });
       },
           ɵ13 = {
-        breadcrumb: "Error 404"
+        breadcrumb: "Error 404",
+        description: "Bienvenido al sitio web del Dr. William Raymundo Brindo atención médica integral con servicios de ingresos hospitalarios, electrocardiograma, terapia respiratoria, consulta a domicilio, certificaciones médicas y cuidado especializado para el adulto mayor**. Mi compromiso es ofrecer una atención profesional, cercana y de calidad para el bienestar de nuestros pacientes. Agenda tu cita hoy y recibe el mejor cuidado médico."
       };
 
       var routes = [{
@@ -542,15 +634,23 @@
         data: ɵ13
       }];
 
-      var AppRoutingModule = function AppRoutingModule() {
+      var AppRoutingModule = /*#__PURE__*/_createClass(function AppRoutingModule() {
         _classCallCheck(this, AppRoutingModule);
-      };
+      });
       /***/
 
     },
 
     /***/
-    "yvrC": function yvrC(module, __webpack_exports__, __webpack_require__) {
+    "yvrC":
+    /*!********************************************!*\
+      !*** ./src/app/app.component.ngfactory.js ***!
+      \********************************************/
+
+    /*! exports provided: RenderType_AppComponent, View_AppComponent_0, View_AppComponent_Host_0, AppComponentNgFactory */
+
+    /***/
+    function yvrC(module, __webpack_exports__, __webpack_require__) {
       "use strict";
 
       __webpack_require__.r(__webpack_exports__);
@@ -655,7 +755,7 @@
       }
 
       function View_AppComponent_Host_0(_l) {
-        return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, null, null, 3, "app-root", [], null, null, null, View_AppComponent_0, RenderType_AppComponent)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵprd"](4608, null, _angular_common__WEBPACK_IMPORTED_MODULE_3__["LocationStrategy"], _angular_common__WEBPACK_IMPORTED_MODULE_3__["PathLocationStrategy"], [_angular_common__WEBPACK_IMPORTED_MODULE_3__["PlatformLocation"], [2, _angular_common__WEBPACK_IMPORTED_MODULE_3__["APP_BASE_HREF"]]]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵprd"](4608, null, _angular_common__WEBPACK_IMPORTED_MODULE_3__["Location"], _angular_common__WEBPACK_IMPORTED_MODULE_3__["Location"], [_angular_common__WEBPACK_IMPORTED_MODULE_3__["LocationStrategy"], _angular_common__WEBPACK_IMPORTED_MODULE_3__["PlatformLocation"]]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](3, 114688, null, 0, _app_component__WEBPACK_IMPORTED_MODULE_4__["AppComponent"], [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_5__["Title"], angular_crumbs_breadcrumb_service__WEBPACK_IMPORTED_MODULE_6__["BreadcrumbService"]], null, null)], function (_ck, _v) {
+        return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, null, null, 3, "app-root", [], null, null, null, View_AppComponent_0, RenderType_AppComponent)), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵprd"](4608, null, _angular_common__WEBPACK_IMPORTED_MODULE_3__["LocationStrategy"], _angular_common__WEBPACK_IMPORTED_MODULE_3__["PathLocationStrategy"], [_angular_common__WEBPACK_IMPORTED_MODULE_3__["PlatformLocation"], [2, _angular_common__WEBPACK_IMPORTED_MODULE_3__["APP_BASE_HREF"]]]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵprd"](4608, null, _angular_common__WEBPACK_IMPORTED_MODULE_3__["Location"], _angular_common__WEBPACK_IMPORTED_MODULE_3__["Location"], [_angular_common__WEBPACK_IMPORTED_MODULE_3__["LocationStrategy"], _angular_common__WEBPACK_IMPORTED_MODULE_3__["PlatformLocation"]]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵdid"](3, 114688, null, 0, _app_component__WEBPACK_IMPORTED_MODULE_4__["AppComponent"], [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_5__["Title"], angular_crumbs_breadcrumb_service__WEBPACK_IMPORTED_MODULE_6__["BreadcrumbService"], _angular_platform_browser__WEBPACK_IMPORTED_MODULE_5__["Meta"]], null, null)], function (_ck, _v) {
           _ck(_v, 3, 0);
         }, null);
       }
@@ -666,7 +766,15 @@
     },
 
     /***/
-    "zUnb": function zUnb(module, __webpack_exports__, __webpack_require__) {
+    "zUnb":
+    /*!*********************!*\
+      !*** ./src/main.ts ***!
+      \*********************/
+
+    /*! no exports provided */
+
+    /***/
+    function zUnb(module, __webpack_exports__, __webpack_require__) {
       "use strict";
 
       __webpack_require__.r(__webpack_exports__);
@@ -707,7 +815,15 @@
     },
 
     /***/
-    "zn8P": function zn8P(module, exports) {
+    "zn8P":
+    /*!******************************************************!*\
+      !*** ./$$_lazy_route_resource lazy namespace object ***!
+      \******************************************************/
+
+    /*! no static exports found */
+
+    /***/
+    function zn8P(module, exports) {
       function webpackEmptyAsyncContext(req) {
         // Here Promise.resolve().then() is used instead of new Promise() to prevent
         // uncaught exception popping up in devtools

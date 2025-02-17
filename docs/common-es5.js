@@ -1,19 +1,39 @@
 (function () {
-  function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+  function _classCallCheck(a, n) { if (!(a instanceof n)) throw new TypeError("Cannot call a class as a function"); }
 
-  function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+  function _defineProperties(e, r) { for (var t = 0; t < r.length; t++) { var o = r[t]; o.enumerable = o.enumerable || !1, o.configurable = !0, "value" in o && (o.writable = !0), Object.defineProperty(e, _toPropertyKey(o.key), o); } }
 
-  function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+  function _createClass(e, r, t) { return r && _defineProperties(e.prototype, r), t && _defineProperties(e, t), Object.defineProperty(e, "prototype", { writable: !1 }), e; }
+
+  function _toPropertyKey(t) { var i = _toPrimitive(t, "string"); return "symbol" == typeof i ? i : i + ""; }
+
+  function _toPrimitive(t, r) { if ("object" != typeof t || !t) return t; var e = t[Symbol.toPrimitive]; if (void 0 !== e) { var i = e.call(t, r || "default"); if ("object" != typeof i) return i; throw new TypeError("@@toPrimitive must return a primitive value."); } return ("string" === r ? String : Number)(t); }
 
   (window["webpackJsonp"] = window["webpackJsonp"] || []).push([["common"], {
     /***/
-    "+x13": function x13(module) {
+    "+x13":
+    /*!************************************************!*\
+      !*** ./src/app/components/data/instagram.json ***!
+      \************************************************/
+
+    /*! exports provided: 0, 1, 2, 3, 4, 5, default */
+
+    /***/
+    function x13(module) {
       module.exports = JSON.parse("[{\"id\":1,\"image\":\"assets/img/home-2/services/ingreso_hospitalario.jpg\"},{\"id\":2,\"image\":\"assets/img/home-2/services/electrocardiograma.jpg\"},{\"id\":5,\"image\":\"assets/img/home-2/services/certificaciones_medicas.jpg\"},{\"id\":6,\"image\":\"assets/img/home-2/services/atencion_adulto_mayor.jpg\"},{\"id\":3,\"image\":\"assets/img/home-2/services/terapia_respiratoria.jpg\"},{\"id\":4,\"image\":\"assets/img/home-2/services/consulta_a_domicilio.jpg\"}]");
       /***/
     },
 
     /***/
-    "8zIM": function zIM(module, __webpack_exports__, __webpack_require__) {
+    "8zIM":
+    /*!************************************************************************!*\
+      !*** ./src/app/components/shared/breadcrumbs/breadcrumbs.component.ts ***!
+      \************************************************************************/
+
+    /*! exports provided: BreadcrumbsComponent */
+
+    /***/
+    function zIM(module, __webpack_exports__, __webpack_require__) {
       "use strict";
 
       __webpack_require__.r(__webpack_exports__);
@@ -29,19 +49,25 @@
           _classCallCheck(this, BreadcrumbsComponent);
         }
 
-        _createClass(BreadcrumbsComponent, [{
+        return _createClass(BreadcrumbsComponent, [{
           key: "ngOnInit",
           value: function ngOnInit() {}
         }]);
-
-        return BreadcrumbsComponent;
       }();
       /***/
 
     },
 
     /***/
-    "Ahbh": function Ahbh(module, __webpack_exports__, __webpack_require__) {
+    "Ahbh":
+    /*!*************************************************************************!*\
+      !*** ./node_modules/ngx-slick-carousel/ngx-slick-carousel.ngfactory.js ***!
+      \*************************************************************************/
+
+    /*! exports provided: SlickCarouselModuleNgFactory, RenderType_SlickCarouselComponent, View_SlickCarouselComponent_0, View_SlickCarouselComponent_Host_0, SlickCarouselComponentNgFactory */
+
+    /***/
+    function Ahbh(module, __webpack_exports__, __webpack_require__) {
       "use strict";
 
       __webpack_require__.r(__webpack_exports__);
@@ -143,7 +169,15 @@
     },
 
     /***/
-    "Ek5M": function Ek5M(module, __webpack_exports__, __webpack_require__) {
+    "Ek5M":
+    /*!**********************************************************************************!*\
+      !*** ./src/app/components/shared/breadcrumbs/breadcrumbs.component.ngfactory.js ***!
+      \**********************************************************************************/
+
+    /*! exports provided: RenderType_BreadcrumbsComponent, View_BreadcrumbsComponent_0, View_BreadcrumbsComponent_Host_0, BreadcrumbsComponentNgFactory */
+
+    /***/
+    function Ek5M(module, __webpack_exports__, __webpack_require__) {
       "use strict";
 
       __webpack_require__.r(__webpack_exports__);
@@ -293,7 +327,15 @@
     },
 
     /***/
-    "KoNW": function KoNW(module, __webpack_exports__, __webpack_require__) {
+    "KoNW":
+    /*!****************************************************************************************!*\
+      !*** ./src/app/components/shared/gallery-slider/gallery-slider.component.ngfactory.js ***!
+      \****************************************************************************************/
+
+    /*! exports provided: RenderType_GallerySliderComponent, View_GallerySliderComponent_0, View_GallerySliderComponent_Host_0, GallerySliderComponentNgFactory */
+
+    /***/
+    function KoNW(module, __webpack_exports__, __webpack_require__) {
       "use strict";
 
       __webpack_require__.r(__webpack_exports__);
@@ -447,7 +489,15 @@
     },
 
     /***/
-    "Wx+U": function WxU(module, __webpack_exports__, __webpack_require__) {
+    "Wx+U":
+    /*!*****************************************************************************************!*\
+      !*** ./src/app/components/shared/breadcrumbs/breadcrumbs.component.css.shim.ngstyle.js ***!
+      \*****************************************************************************************/
+
+    /*! exports provided: styles */
+
+    /***/
+    function WxU(module, __webpack_exports__, __webpack_require__) {
       "use strict";
 
       __webpack_require__.r(__webpack_exports__);
@@ -470,7 +520,15 @@
     },
 
     /***/
-    "uy+D": function uyD(module, __webpack_exports__, __webpack_require__) {
+    "uy+D":
+    /*!***********************************************************************!*\
+      !*** ./node_modules/angular-crumbs/breadcrumb.component.ngfactory.js ***!
+      \***********************************************************************/
+
+    /*! exports provided: RenderType_BreadcrumbComponent, View_BreadcrumbComponent_0, View_BreadcrumbComponent_Host_0, BreadcrumbComponentNgFactory */
+
+    /***/
+    function uyD(module, __webpack_exports__, __webpack_require__) {
       "use strict";
 
       __webpack_require__.r(__webpack_exports__);
@@ -639,7 +697,15 @@
     },
 
     /***/
-    "wv+m": function wvM(module, __webpack_exports__, __webpack_require__) {
+    "wv+m":
+    /*!******************************************************************************!*\
+      !*** ./src/app/components/shared/gallery-slider/gallery-slider.component.ts ***!
+      \******************************************************************************/
+
+    /*! exports provided: GallerySliderComponent */
+
+    /***/
+    function wvM(module, __webpack_exports__, __webpack_require__) {
       "use strict";
 
       __webpack_require__.r(__webpack_exports__);
@@ -687,19 +753,25 @@
           };
         }
 
-        _createClass(GallerySliderComponent, [{
+        return _createClass(GallerySliderComponent, [{
           key: "ngOnInit",
           value: function ngOnInit() {}
         }]);
-
-        return GallerySliderComponent;
       }();
       /***/
 
     },
 
     /***/
-    "yeUG": function yeUG(module, __webpack_exports__, __webpack_require__) {
+    "yeUG":
+    /*!***********************************************************************************************!*\
+      !*** ./src/app/components/shared/gallery-slider/gallery-slider.component.css.shim.ngstyle.js ***!
+      \***********************************************************************************************/
+
+    /*! exports provided: styles */
+
+    /***/
+    function yeUG(module, __webpack_exports__, __webpack_require__) {
       "use strict";
 
       __webpack_require__.r(__webpack_exports__);

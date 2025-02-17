@@ -1,27 +1,39 @@
 (function () {
-  function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+  function _callSuper(t, o, e) { return o = _getPrototypeOf(o), _possibleConstructorReturn(t, _isNativeReflectConstruct() ? Reflect.construct(o, e || [], _getPrototypeOf(t).constructor) : o.apply(t, e)); }
 
-  function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+  function _possibleConstructorReturn(t, e) { if (e && ("object" == typeof e || "function" == typeof e)) return e; if (void 0 !== e) throw new TypeError("Derived constructors may only return object or undefined"); return _assertThisInitialized(t); }
 
-  function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+  function _assertThisInitialized(e) { if (void 0 === e) throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); return e; }
 
-  function _possibleConstructorReturn(self, call) { if (call && (typeof call === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+  function _isNativeReflectConstruct() { try { var t = !Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); } catch (t) {} return (_isNativeReflectConstruct = function _isNativeReflectConstruct() { return !!t; })(); }
 
-  function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+  function _getPrototypeOf(t) { return _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf.bind() : function (t) { return t.__proto__ || Object.getPrototypeOf(t); }, _getPrototypeOf(t); }
 
-  function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
+  function _inherits(t, e) { if ("function" != typeof e && null !== e) throw new TypeError("Super expression must either be null or a function"); t.prototype = Object.create(e && e.prototype, { constructor: { value: t, writable: !0, configurable: !0 } }), Object.defineProperty(t, "prototype", { writable: !1 }), e && _setPrototypeOf(t, e); }
 
-  function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+  function _setPrototypeOf(t, e) { return _setPrototypeOf = Object.setPrototypeOf ? Object.setPrototypeOf.bind() : function (t, e) { return t.__proto__ = e, t; }, _setPrototypeOf(t, e); }
 
-  function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+  function _classCallCheck(a, n) { if (!(a instanceof n)) throw new TypeError("Cannot call a class as a function"); }
 
-  function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+  function _defineProperties(e, r) { for (var t = 0; t < r.length; t++) { var o = r[t]; o.enumerable = o.enumerable || !1, o.configurable = !0, "value" in o && (o.writable = !0), Object.defineProperty(e, _toPropertyKey(o.key), o); } }
 
-  function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+  function _createClass(e, r, t) { return r && _defineProperties(e.prototype, r), t && _defineProperties(e, t), Object.defineProperty(e, "prototype", { writable: !1 }), e; }
+
+  function _toPropertyKey(t) { var i = _toPrimitive(t, "string"); return "symbol" == typeof i ? i : i + ""; }
+
+  function _toPrimitive(t, r) { if ("object" != typeof t || !t) return t; var e = t[Symbol.toPrimitive]; if (void 0 !== e) { var i = e.call(t, r || "default"); if ("object" != typeof i) return i; throw new TypeError("@@toPrimitive must return a primitive value."); } return ("string" === r ? String : Number)(t); }
 
   (window["webpackJsonp"] = window["webpackJsonp"] || []).push([["components-pages-doctor-details-doctor-details-module-ngfactory"], {
     /***/
-    "3V3g": function V3g(module, __webpack_exports__, __webpack_require__) {
+    "3V3g":
+    /*!**********************************************************************************************!*\
+      !*** ./src/app/components/pages/doctor-details/doctor-details.component.css.shim.ngstyle.js ***!
+      \**********************************************************************************************/
+
+    /*! exports provided: styles */
+
+    /***/
+    function V3g(module, __webpack_exports__, __webpack_require__) {
       "use strict";
 
       __webpack_require__.r(__webpack_exports__);
@@ -44,7 +56,15 @@
     },
 
     /***/
-    "9JBT": function JBT(module, __webpack_exports__, __webpack_require__) {
+    "9JBT":
+    /*!*****************************************************************************!*\
+      !*** ./src/app/components/pages/doctor-details/doctor-details.component.ts ***!
+      \*****************************************************************************/
+
+    /*! exports provided: DoctorDetailsComponent */
+
+    /***/
+    function JBT(module, __webpack_exports__, __webpack_require__) {
       "use strict";
 
       __webpack_require__.r(__webpack_exports__);
@@ -60,19 +80,25 @@
           _classCallCheck(this, DoctorDetailsComponent);
         }
 
-        _createClass(DoctorDetailsComponent, [{
+        return _createClass(DoctorDetailsComponent, [{
           key: "ngOnInit",
           value: function ngOnInit() {}
         }]);
-
-        return DoctorDetailsComponent;
       }();
       /***/
 
     },
 
     /***/
-    "AQte": function AQte(module, __webpack_exports__, __webpack_require__) {
+    "AQte":
+    /*!****************************************************************************************!*\
+      !*** ./src/app/components/pages/doctor-details/content/content.component.ngfactory.js ***!
+      \****************************************************************************************/
+
+    /*! exports provided: RenderType_ContentComponent, View_ContentComponent_0, View_ContentComponent_Host_0, ContentComponentNgFactory */
+
+    /***/
+    function AQte(module, __webpack_exports__, __webpack_require__) {
       "use strict";
 
       __webpack_require__.r(__webpack_exports__);
@@ -206,7 +232,15 @@
     },
 
     /***/
-    "Chkp": function Chkp(module, __webpack_exports__, __webpack_require__) {
+    "Chkp":
+    /*!**********************************************************************************!*\
+      !*** ./src/app/components/pages/doctor-details/doctor-details-routing.module.ts ***!
+      \**********************************************************************************/
+
+    /*! exports provided: DoctorDetailsRoutingModule */
+
+    /***/
+    function Chkp(module, __webpack_exports__, __webpack_require__) {
       "use strict";
 
       __webpack_require__.r(__webpack_exports__);
@@ -228,15 +262,23 @@
         component: _doctor_details_component__WEBPACK_IMPORTED_MODULE_0__["DoctorDetailsComponent"]
       }];
 
-      var DoctorDetailsRoutingModule = function DoctorDetailsRoutingModule() {
+      var DoctorDetailsRoutingModule = /*#__PURE__*/_createClass(function DoctorDetailsRoutingModule() {
         _classCallCheck(this, DoctorDetailsRoutingModule);
-      };
+      });
       /***/
 
     },
 
     /***/
-    "FVye": function FVye(module, __webpack_exports__, __webpack_require__) {
+    "FVye":
+    /*!**************************************************************************!*\
+      !*** ./src/app/components/pages/doctor-details/doctor-details.module.ts ***!
+      \**************************************************************************/
+
+    /*! exports provided: DoctorDetailsModule */
+
+    /***/
+    function FVye(module, __webpack_exports__, __webpack_require__) {
       "use strict";
 
       __webpack_require__.r(__webpack_exports__);
@@ -247,15 +289,23 @@
         return DoctorDetailsModule;
       });
 
-      var DoctorDetailsModule = function DoctorDetailsModule() {
+      var DoctorDetailsModule = /*#__PURE__*/_createClass(function DoctorDetailsModule() {
         _classCallCheck(this, DoctorDetailsModule);
-      };
+      });
       /***/
 
     },
 
     /***/
-    "GtD+": function GtD(module, __webpack_exports__, __webpack_require__) {
+    "GtD+":
+    /*!************************************************************************************!*\
+      !*** ./src/app/components/pages/doctor-details/doctor-details.module.ngfactory.js ***!
+      \************************************************************************************/
+
+    /*! exports provided: DoctorDetailsModuleNgFactory */
+
+    /***/
+    function GtD(module, __webpack_exports__, __webpack_require__) {
       "use strict";
 
       __webpack_require__.r(__webpack_exports__);
@@ -394,7 +444,15 @@
     },
 
     /***/
-    "IHjr": function IHjr(module, __webpack_exports__, __webpack_require__) {
+    "IHjr":
+    /*!******************************************************************!*\
+      !*** ./node_modules/ngx-page-scroll/fesm2015/ngx-page-scroll.js ***!
+      \******************************************************************/
+
+    /*! exports provided: NgxPageScrollDirective, NgxPageScrollModule */
+
+    /***/
+    function IHjr(module, __webpack_exports__, __webpack_require__) {
       "use strict";
 
       __webpack_require__.r(__webpack_exports__);
@@ -454,7 +512,7 @@
           this.document = document;
         }
 
-        _createClass(NgxPageScrollDirective, [{
+        return _createClass(NgxPageScrollDirective, [{
           key: "ngOnChanges",
           value: function ngOnChanges(changes) {
             // Some inputs changed, reset the pageScrollInstance
@@ -577,8 +635,6 @@
             return false; // to preventDefault()
           }
         }]);
-
-        return NgxPageScrollDirective;
       }();
 
       NgxPageScrollDirective.decorators = [{
@@ -653,9 +709,9 @@
         }]
       };
 
-      var NgxPageScrollModule = function NgxPageScrollModule() {
+      var NgxPageScrollModule = /*#__PURE__*/_createClass(function NgxPageScrollModule() {
         _classCallCheck(this, NgxPageScrollModule);
-      };
+      });
 
       NgxPageScrollModule.decorators = [{
         type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["NgModule"],
@@ -678,7 +734,15 @@
     },
 
     /***/
-    "IL5t": function IL5t(module, __webpack_exports__, __webpack_require__) {
+    "IL5t":
+    /*!***********************************************************************************************!*\
+      !*** ./src/app/components/pages/doctor-details/content/content.component.css.shim.ngstyle.js ***!
+      \***********************************************************************************************/
+
+    /*! exports provided: styles */
+
+    /***/
+    function IL5t(module, __webpack_exports__, __webpack_require__) {
       "use strict";
 
       __webpack_require__.r(__webpack_exports__);
@@ -701,7 +765,15 @@
     },
 
     /***/
-    "LohZ": function LohZ(module, __webpack_exports__, __webpack_require__) {
+    "LohZ":
+    /*!********************************************************************************!*\
+      !*** ./src/app/components/shared/fab-button/fab-button.component.ngfactory.js ***!
+      \********************************************************************************/
+
+    /*! exports provided: RenderType_FabButtonComponent, View_FabButtonComponent_0, View_FabButtonComponent_Host_0, FabButtonComponentNgFactory */
+
+    /***/
+    function LohZ(module, __webpack_exports__, __webpack_require__) {
       "use strict";
 
       __webpack_require__.r(__webpack_exports__);
@@ -790,7 +862,15 @@
     },
 
     /***/
-    "Mpij": function Mpij(module, __webpack_exports__, __webpack_require__) {
+    "Mpij":
+    /*!****************************************************************************!*\
+      !*** ./node_modules/ngx-page-scroll-core/fesm2015/ngx-page-scroll-core.js ***!
+      \****************************************************************************/
+
+    /*! exports provided: NGXPS_CONFIG, NgxPageScrollCoreModule, PageScrollInstance, PageScrollService, defaultPageScrollConfig */
+
+    /***/
+    function Mpij(module, __webpack_exports__, __webpack_require__) {
       "use strict";
 
       __webpack_require__.r(__webpack_exports__);
@@ -868,7 +948,7 @@
           this.pageScrollOptions = pageScrollOptions;
         }
 
-        _createClass(PageScrollInstance, [{
+        return _createClass(PageScrollInstance, [{
           key: "getScrollPropertyValue",
           value: function getScrollPropertyValue(scrollingView) {
             if (!this.pageScrollOptions.verticalScrolling) {
@@ -1109,13 +1189,11 @@
             return position;
           }
         }]);
-
-        return PageScrollInstance;
       }();
 
       var NGXPS_CONFIG = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["InjectionToken"]('ngxps_config');
 
-      var ɵ0 = function ɵ0(t, b, c, d) {
+      var ɵ0$1 = function ɵ0$1(t, b, c, d) {
         // Linear easing
         return c * t / d + b;
       };
@@ -1133,7 +1211,7 @@
         interruptKeys: [' ', 'Escape', 'Tab', 'Enter', 'PageUp', 'PageDown', 'Home', 'End', 'ArrowUp', 'ArrowRight', 'ArrowLeft', 'ArrowDown'],
         interruptible: true,
         scrollInView: true,
-        easingLogic: ɵ0
+        easingLogic: ɵ0$1
       };
 
       var PageScrollService = /*#__PURE__*/function () {
@@ -1177,7 +1255,7 @@
           this.config = Object.assign(Object.assign({}, defaultPageScrollConfig), customConfig);
         }
 
-        _createClass(PageScrollService, [{
+        return _createClass(PageScrollService, [{
           key: "stopInternal",
           value: function stopInternal(interrupted, pageScrollInstance) {
             var index = this.runningInstances.indexOf(pageScrollInstance);
@@ -1399,13 +1477,11 @@
             return this.stopInternal(true, pageScrollInstance);
           }
         }]);
-
-        return PageScrollService;
       }();
 
-      PageScrollService.ɵprov = Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineInjectable"])({
+      PageScrollService.ɵprov = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineInjectable"]({
         factory: function PageScrollService_Factory() {
-          return new PageScrollService(Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"])(NGXPS_CONFIG));
+          return new PageScrollService(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](NGXPS_CONFIG));
         },
         token: PageScrollService,
         providedIn: "root"
@@ -1427,14 +1503,14 @@
         }];
       };
 
-      var ɵ0$1 = {};
+      var ɵ0 = {};
 
       var NgxPageScrollCoreModule = /*#__PURE__*/function () {
         function NgxPageScrollCoreModule() {
           _classCallCheck(this, NgxPageScrollCoreModule);
         }
 
-        _createClass(NgxPageScrollCoreModule, null, [{
+        return _createClass(NgxPageScrollCoreModule, null, [{
           key: "forRoot",
           value: function forRoot(config) {
             return {
@@ -1446,8 +1522,6 @@
             };
           }
         }]);
-
-        return NgxPageScrollCoreModule;
       }();
 
       NgxPageScrollCoreModule.decorators = [{
@@ -1455,7 +1529,7 @@
         args: [{
           providers: [PageScrollService, {
             provide: NGXPS_CONFIG,
-            useValue: ɵ0$1
+            useValue: ɵ0
           }]
         }]
       }];
@@ -1472,7 +1546,15 @@
     },
 
     /***/
-    "Mr9o": function Mr9o(module, __webpack_exports__, __webpack_require__) {
+    "Mr9o":
+    /*!***************************************************************************************!*\
+      !*** ./src/app/components/pages/doctor-details/doctor-details.component.ngfactory.js ***!
+      \***************************************************************************************/
+
+    /*! exports provided: RenderType_DoctorDetailsComponent, View_DoctorDetailsComponent_0, View_DoctorDetailsComponent_Host_0, DoctorDetailsComponentNgFactory */
+
+    /***/
+    function Mr9o(module, __webpack_exports__, __webpack_require__) {
       "use strict";
 
       __webpack_require__.r(__webpack_exports__);
@@ -1641,7 +1723,15 @@
     },
 
     /***/
-    "RqsJ": function RqsJ(module, __webpack_exports__, __webpack_require__) {
+    "RqsJ":
+    /*!**********************************************************************!*\
+      !*** ./src/app/components/shared/fab-button/fab-button.component.ts ***!
+      \**********************************************************************/
+
+    /*! exports provided: FabButtonComponent */
+
+    /***/
+    function RqsJ(module, __webpack_exports__, __webpack_require__) {
       "use strict";
 
       __webpack_require__.r(__webpack_exports__);
@@ -1660,21 +1750,27 @@
           this.whatsAppUrl = '';
         }
 
-        _createClass(FabButtonComponent, [{
+        return _createClass(FabButtonComponent, [{
           key: "ngOnInit",
           value: function ngOnInit() {
             this.whatsAppUrl = this.whatsAppService.getWhatsAppUrl();
           }
         }]);
-
-        return FabButtonComponent;
       }();
       /***/
 
     },
 
     /***/
-    "WcO/": function WcO(module, __webpack_exports__, __webpack_require__) {
+    "WcO/":
+    /*!*******************************************************************!*\
+      !*** ./src/app/components/helper/doctor/doctor-helper.service.ts ***!
+      \*******************************************************************/
+
+    /*! exports provided: DoctorHelperService */
+
+    /***/
+    function WcO_(module, __webpack_exports__, __webpack_require__) {
       "use strict";
 
       __webpack_require__.r(__webpack_exports__);
@@ -1734,7 +1830,7 @@
           this.favorite = false;
         }
 
-        _createClass(DoctorHelperService, [{
+        return _createClass(DoctorHelperService, [{
           key: "favoriteTrigger",
           value: function favoriteTrigger(item) {
             item.favorite = !item.favorite;
@@ -1806,8 +1902,6 @@
           key: "ngOnInit",
           value: function ngOnInit() {}
         }]);
-
-        return DoctorHelperService;
       }();
 
       DoctorHelperService.ɵprov = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵdefineInjectable"]({
@@ -1821,7 +1915,15 @@
     },
 
     /***/
-    "hbnH": function hbnH(module, __webpack_exports__, __webpack_require__) {
+    "hbnH":
+    /*!******************************************************************************!*\
+      !*** ./src/app/components/pages/doctor-details/content/content.component.ts ***!
+      \******************************************************************************/
+
+    /*! exports provided: ContentComponent */
+
+    /***/
+    function hbnH(module, __webpack_exports__, __webpack_require__) {
       "use strict";
 
       __webpack_require__.r(__webpack_exports__);
@@ -1851,17 +1953,15 @@
       "iInd");
 
       var ContentComponent = /*#__PURE__*/function (_src_app_components_h) {
-        _inherits(ContentComponent, _src_app_components_h);
-
-        var _super = _createSuper(ContentComponent);
-
         function ContentComponent() {
           _classCallCheck(this, ContentComponent);
 
-          return _super.apply(this, arguments);
+          return _callSuper(this, ContentComponent, arguments);
         }
 
-        _createClass(ContentComponent, [{
+        _inherits(ContentComponent, _src_app_components_h);
+
+        return _createClass(ContentComponent, [{
           key: "ngAfterContentInit",
           value: function ngAfterContentInit() {
             this.setCategory(1);
@@ -1869,8 +1969,6 @@
             this.getDoctor(1);
           }
         }]);
-
-        return ContentComponent;
       }(src_app_components_helper_doctor_doctor_helper_service__WEBPACK_IMPORTED_MODULE_0__["DoctorHelperService"]);
 
       ContentComponent.ɵprov = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineInjectable"]({
@@ -1884,13 +1982,29 @@
     },
 
     /***/
-    "t5dm": function t5dm(module) {
-      module.exports = JSON.parse("[{\"id\":1,\"name\":\"William Alexander Raymundo Reyes\",\"image\":\"assets/img/home-2/contactame.jpg\",\"rating\":5,\"specialist\":\"Doctor en Medicina\",\"location\":\"El Salvador\",\"qualification\":\"Graduado de Universidad de El Salvador\",\"experience\":5,\"available\":[\"Tue\",\"Wed\",\"Thu\",\"Fri\"],\"gender\":\"Male\",\"fees\":100,\"category\":[1,2],\"phone\":\"(503)6420-4810\",\"email\":\"dr.william.raymundo@gmail.com\",\"htmltext\":\"<p> Realizó su internado rotatorio en hospitales de tercer nivel (Hospital Nacional Rosales, Hospital Nacional de Niños Benjamín Bloom y Hospital Nacional de la Mujer María Isabel Rodríguez).</p><p>Cuenta con amplia experiencia en el ámbito privado así como en el sistema nacional de salud.</p><div class='spacer'></div><h4>Estudios de investigación científica</h4><div class='sigma_general-list style-3'><ul><li> <i class='far fa-check'></i> <p class='ml-2'>Análisis de Situación  de Salud Integral de la Unidad Comunitaria de Salud Familiar “paso de Gualache”, Tecapan, Usulutan. 2017</p></li><li> <i class='far fa-check'></i> <p class='ml-2'>Incidencia de Obesidad Asociada a Enfermedad Renal Crónica en la población de 25 a 60 años que consulta en Unidad Comunitaria de Salud Familiar Buenos Aires Tamanique, Durante marzo a junio 2017</p></li></ul></div><h4>Actualmente</h4><p>Se desempeña como Médico de planta del servicio privado del Hospital Militar Central y Médico agregado del Hospital Médico-Quirúrgico del Instituto Salvadoreño del Seguro Social. </p>\",\"reviews\":[{\"user\":[1],\"commentdate\":\"07 March\",\"rating\":4,\"comment\":\"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.\"},{\"user\":[2],\"commentdate\":\"07 March\",\"rating\":5,\"comment\":\"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.\"},{\"user\":[3],\"commentdate\":\"07 March\",\"rating\":4,\"comment\":\"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.\"}],\"social\":[{\"icon\":\"fab fa-facebook-f\",\"title\":\"Facebook\",\"url\":\"/\"},{\"icon\":\"fab fa-twitter\",\"title\":\"Twitter\",\"url\":\"/\"},{\"icon\":\"fab fa-instagram\",\"title\":\"Instagram\",\"url\":\"/\"}]},{\"id\":2,\"name\":\"Rebecca Gilbert\",\"image\":\"assets/img/doctors-grid/348x350-1.jpg\",\"rating\":4,\"specialist\":\"Obstetrics & Gynaecology\",\"location\":\"Hong Kong\",\"qualification\":\"University of California San Francisco Parnassus Campus\",\"experience\":5,\"available\":[\"Tue\",\"Wed\",\"Thu\",\"Fri\"],\"gender\":\"Male\",\"fees\":\"\",\"category\":[3,4],\"phone\":\"(741)376-5672\",\"email\":\"example@example.com\",\"htmltext\":\"<p> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p><div class='spacer'></div><h4>Subspecialities</h4><p> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard.</p><div class='row'><div class='col-lg-6'><div class='sigma_general-list style-3'><ul><li> <i class='far fa-check'></i> <span>Best Fitness Excercises</span></li><li> <i class='far fa-check'></i> <span>Combine Fitness and Lifestyle</span></li><li> <i class='far fa-check'></i> <span>Achieve a Specific Goal</span></li></ul></div></div><div class='col-lg-6'><div class='sigma_general-list style-3'><ul><li> <i class='far fa-check'></i> <span>Best Fitness Excercises</span></li><li> <i class='far fa-check'></i> <span>Combine Fitness and Lifestyle</span></li><li> <i class='far fa-check'></i> <span>Achieve a Specific Goal</span></li></ul></div></div></div>\",\"reviews\":[{\"user\":[1],\"commentdate\":\"07 March\",\"rating\":4,\"comment\":\"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.\"},{\"user\":[2],\"commentdate\":\"07 March\",\"rating\":5,\"comment\":\"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.\"},{\"user\":[3],\"commentdate\":\"07 March\",\"rating\":4,\"comment\":\"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.\"}],\"social\":[{\"icon\":\"fab fa-facebook-f\",\"title\":\"Facebook\",\"url\":\"/\"},{\"icon\":\"fab fa-twitter\",\"title\":\"Twitter\",\"url\":\"/\"},{\"icon\":\"fab fa-instagram\",\"title\":\"Instagram\",\"url\":\"/\"}]},{\"id\":3,\"name\":\"Bobby Stanley\",\"image\":\"assets/img/doctors-grid/348x350-2.jpg\",\"rating\":5,\"specialist\":\"Obstetrics & Gynaecology\",\"location\":\"Hong Kong\",\"qualification\":\"University of California San Francisco Parnassus Campus\",\"experience\":5,\"available\":[\"Tue\",\"Wed\",\"Thu\",\"Fri\"],\"gender\":\"Female\",\"fees\":100,\"category\":[1,5],\"phone\":\"(741)376-5672\",\"email\":\"example@example.com\",\"htmltext\":\"<p> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p><div class='spacer'></div><h4>Subspecialities</h4><p> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard.</p><div class='row'><div class='col-lg-6'><div class='sigma_general-list style-3'><ul><li> <i class='far fa-check'></i> <span>Best Fitness Excercises</span></li><li> <i class='far fa-check'></i> <span>Combine Fitness and Lifestyle</span></li><li> <i class='far fa-check'></i> <span>Achieve a Specific Goal</span></li></ul></div></div><div class='col-lg-6'><div class='sigma_general-list style-3'><ul><li> <i class='far fa-check'></i> <span>Best Fitness Excercises</span></li><li> <i class='far fa-check'></i> <span>Combine Fitness and Lifestyle</span></li><li> <i class='far fa-check'></i> <span>Achieve a Specific Goal</span></li></ul></div></div></div>\",\"reviews\":[{\"user\":[1],\"commentdate\":\"07 March\",\"rating\":4,\"comment\":\"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.\"},{\"user\":[2],\"commentdate\":\"07 March\",\"rating\":5,\"comment\":\"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.\"},{\"user\":[3],\"commentdate\":\"07 March\",\"rating\":4,\"comment\":\"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.\"}],\"social\":[{\"icon\":\"fab fa-facebook-f\",\"title\":\"Facebook\",\"url\":\"/\"},{\"icon\":\"fab fa-twitter\",\"title\":\"Twitter\",\"url\":\"/\"},{\"icon\":\"fab fa-instagram\",\"title\":\"Instagram\",\"url\":\"/\"}]},{\"id\":4,\"name\":\"Kathryn Cooper\",\"image\":\"assets/img/doctors-grid/348x350-3.jpg\",\"rating\":4,\"specialist\":\"Obstetrics & Gynaecology\",\"location\":\"Hong Kong\",\"qualification\":\"University of California San Francisco Parnassus Campus\",\"experience\":5,\"available\":[],\"gender\":\"Female\",\"fees\":100,\"category\":[2,3],\"phone\":\"(741)376-5672\",\"email\":\"example@example.com\",\"htmltext\":\"<p> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p><div class='spacer'></div><h4>Subspecialities</h4><p> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard.</p><div class='row'><div class='col-lg-6'><div class='sigma_general-list style-3'><ul><li> <i class='far fa-check'></i> <span>Best Fitness Excercises</span></li><li> <i class='far fa-check'></i> <span>Combine Fitness and Lifestyle</span></li><li> <i class='far fa-check'></i> <span>Achieve a Specific Goal</span></li></ul></div></div><div class='col-lg-6'><div class='sigma_general-list style-3'><ul><li> <i class='far fa-check'></i> <span>Best Fitness Excercises</span></li><li> <i class='far fa-check'></i> <span>Combine Fitness and Lifestyle</span></li><li> <i class='far fa-check'></i> <span>Achieve a Specific Goal</span></li></ul></div></div></div>\",\"reviews\":[{\"user\":[1],\"commentdate\":\"07 March\",\"rating\":4,\"comment\":\"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.\"},{\"user\":[2],\"commentdate\":\"07 March\",\"rating\":5,\"comment\":\"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.\"},{\"user\":[3],\"commentdate\":\"07 March\",\"rating\":4,\"comment\":\"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.\"}],\"social\":[{\"icon\":\"fab fa-facebook-f\",\"title\":\"Facebook\",\"url\":\"/\"},{\"icon\":\"fab fa-twitter\",\"title\":\"Twitter\",\"url\":\"/\"},{\"icon\":\"fab fa-instagram\",\"title\":\"Instagram\",\"url\":\"/\"}]},{\"id\":5,\"name\":\"Carmen Nelson\",\"image\":\"assets/img/doctors-grid/348x350-4.jpg\",\"rating\":4,\"specialist\":\"Obstetrics & Gynaecology\",\"location\":\"Hong Kong\",\"qualification\":\"University of California San Francisco Parnassus Campus\",\"experience\":5,\"available\":[\"Tue\",\"Wed\",\"Thu\",\"Fri\"],\"gender\":\"Female\",\"fees\":\"\",\"category\":[4,5],\"phone\":\"(741)376-5672\",\"email\":\"example@example.com\",\"htmltext\":\"<p> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p><div class='spacer'></div><h4>Subspecialities</h4><p> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard.</p><div class='row'><div class='col-lg-6'><div class='sigma_general-list style-3'><ul><li> <i class='far fa-check'></i> <span>Best Fitness Excercises</span></li><li> <i class='far fa-check'></i> <span>Combine Fitness and Lifestyle</span></li><li> <i class='far fa-check'></i> <span>Achieve a Specific Goal</span></li></ul></div></div><div class='col-lg-6'><div class='sigma_general-list style-3'><ul><li> <i class='far fa-check'></i> <span>Best Fitness Excercises</span></li><li> <i class='far fa-check'></i> <span>Combine Fitness and Lifestyle</span></li><li> <i class='far fa-check'></i> <span>Achieve a Specific Goal</span></li></ul></div></div></div>\",\"reviews\":[{\"user\":[1],\"commentdate\":\"07 March\",\"rating\":4,\"comment\":\"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.\"},{\"user\":[2],\"commentdate\":\"07 March\",\"rating\":5,\"comment\":\"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.\"},{\"user\":[3],\"commentdate\":\"07 March\",\"rating\":4,\"comment\":\"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.\"}],\"social\":[{\"icon\":\"fab fa-facebook-f\",\"title\":\"Facebook\",\"url\":\"/\"},{\"icon\":\"fab fa-twitter\",\"title\":\"Twitter\",\"url\":\"/\"},{\"icon\":\"fab fa-instagram\",\"title\":\"Instagram\",\"url\":\"/\"}]},{\"id\":6,\"name\":\"Janice Hughes\",\"image\":\"assets/img/doctors-grid/348x350-5.jpg\",\"rating\":5,\"specialist\":\"Obstetrics & Gynaecology\",\"location\":\"Hong Kong\",\"qualification\":\"University of California San Francisco Parnassus Campus\",\"experience\":5,\"available\":[],\"gender\":\"Male\",\"fees\":100,\"category\":[1,2],\"phone\":\"(741)376-5672\",\"email\":\"example@example.com\",\"htmltext\":\"<p> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p><div class='spacer'></div><h4>Subspecialities</h4><p> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard.</p><div class='row'><div class='col-lg-6'><div class='sigma_general-list style-3'><ul><li> <i class='far fa-check'></i> <span>Best Fitness Excercises</span></li><li> <i class='far fa-check'></i> <span>Combine Fitness and Lifestyle</span></li><li> <i class='far fa-check'></i> <span>Achieve a Specific Goal</span></li></ul></div></div><div class='col-lg-6'><div class='sigma_general-list style-3'><ul><li> <i class='far fa-check'></i> <span>Best Fitness Excercises</span></li><li> <i class='far fa-check'></i> <span>Combine Fitness and Lifestyle</span></li><li> <i class='far fa-check'></i> <span>Achieve a Specific Goal</span></li></ul></div></div></div>\",\"reviews\":[{\"user\":[1],\"commentdate\":\"07 March\",\"rating\":4,\"comment\":\"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.\"},{\"user\":[2],\"commentdate\":\"07 March\",\"rating\":5,\"comment\":\"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.\"},{\"user\":[3],\"commentdate\":\"07 March\",\"rating\":4,\"comment\":\"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.\"}],\"social\":[{\"icon\":\"fab fa-facebook-f\",\"title\":\"Facebook\",\"url\":\"/\"},{\"icon\":\"fab fa-twitter\",\"title\":\"Twitter\",\"url\":\"/\"},{\"icon\":\"fab fa-instagram\",\"title\":\"Instagram\",\"url\":\"/\"}]}]");
+    "t5dm":
+    /*!****************************************************!*\
+      !*** ./src/app/components/data/doctor/doctor.json ***!
+      \****************************************************/
+
+    /*! exports provided: 0, 1, 2, 3, 4, 5, default */
+
+    /***/
+    function t5dm(module) {
+      module.exports = JSON.parse("[{\"id\":1,\"name\":\"William Alexander Raymundo Reyes\",\"image\":\"assets/img/home-2/contactame.jpeg\",\"rating\":5,\"specialist\":\"Doctor en Medicina\",\"location\":\"El Salvador\",\"qualification\":\"Graduado de Universidad de El Salvador\",\"experience\":5,\"available\":[\"Tue\",\"Wed\",\"Thu\",\"Fri\"],\"gender\":\"Male\",\"fees\":100,\"category\":[1,2],\"phone\":\"(503)6420-4810\",\"email\":\"dr.william.raymundo@gmail.com\",\"htmltext\":\"<p> Realizó su internado rotatorio en hospitales de tercer nivel (Hospital Nacional Rosales, Hospital Nacional de Niños Benjamín Bloom y Hospital Nacional de la Mujer María Isabel Rodríguez).</p><p>Cuenta con amplia experiencia en el ámbito privado así como en el sistema nacional de salud.</p><div class='spacer'></div><h4>Estudios de investigación científica</h4><div class='sigma_general-list style-3'><ul><li> <i class='far fa-check'></i> <p class='ml-2'>Análisis de Situación  de Salud Integral de la Unidad Comunitaria de Salud Familiar “paso de Gualache”, Tecapan, Usulutan. 2017</p></li><li> <i class='far fa-check'></i> <p class='ml-2'>Incidencia de Obesidad Asociada a Enfermedad Renal Crónica en la población de 25 a 60 años que consulta en Unidad Comunitaria de Salud Familiar Buenos Aires Tamanique, Durante marzo a junio 2017</p></li></ul></div><h4>Actualmente</h4><p>Se desempeña como Médico de planta del servicio privado del Hospital Militar Central y Médico agregado del Hospital Médico-Quirúrgico del Instituto Salvadoreño del Seguro Social. </p>\",\"reviews\":[{\"user\":[1],\"commentdate\":\"07 March\",\"rating\":4,\"comment\":\"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.\"},{\"user\":[2],\"commentdate\":\"07 March\",\"rating\":5,\"comment\":\"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.\"},{\"user\":[3],\"commentdate\":\"07 March\",\"rating\":4,\"comment\":\"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.\"}],\"social\":[{\"icon\":\"fab fa-facebook-f\",\"title\":\"Facebook\",\"url\":\"/\"},{\"icon\":\"fab fa-twitter\",\"title\":\"Twitter\",\"url\":\"/\"},{\"icon\":\"fab fa-instagram\",\"title\":\"Instagram\",\"url\":\"/\"}]},{\"id\":2,\"name\":\"Rebecca Gilbert\",\"image\":\"assets/img/doctors-grid/348x350-1.jpg\",\"rating\":4,\"specialist\":\"Obstetrics & Gynaecology\",\"location\":\"Hong Kong\",\"qualification\":\"University of California San Francisco Parnassus Campus\",\"experience\":5,\"available\":[\"Tue\",\"Wed\",\"Thu\",\"Fri\"],\"gender\":\"Male\",\"fees\":\"\",\"category\":[3,4],\"phone\":\"(741)376-5672\",\"email\":\"example@example.com\",\"htmltext\":\"<p> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p><div class='spacer'></div><h4>Subspecialities</h4><p> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard.</p><div class='row'><div class='col-lg-6'><div class='sigma_general-list style-3'><ul><li> <i class='far fa-check'></i> <span>Best Fitness Excercises</span></li><li> <i class='far fa-check'></i> <span>Combine Fitness and Lifestyle</span></li><li> <i class='far fa-check'></i> <span>Achieve a Specific Goal</span></li></ul></div></div><div class='col-lg-6'><div class='sigma_general-list style-3'><ul><li> <i class='far fa-check'></i> <span>Best Fitness Excercises</span></li><li> <i class='far fa-check'></i> <span>Combine Fitness and Lifestyle</span></li><li> <i class='far fa-check'></i> <span>Achieve a Specific Goal</span></li></ul></div></div></div>\",\"reviews\":[{\"user\":[1],\"commentdate\":\"07 March\",\"rating\":4,\"comment\":\"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.\"},{\"user\":[2],\"commentdate\":\"07 March\",\"rating\":5,\"comment\":\"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.\"},{\"user\":[3],\"commentdate\":\"07 March\",\"rating\":4,\"comment\":\"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.\"}],\"social\":[{\"icon\":\"fab fa-facebook-f\",\"title\":\"Facebook\",\"url\":\"/\"},{\"icon\":\"fab fa-twitter\",\"title\":\"Twitter\",\"url\":\"/\"},{\"icon\":\"fab fa-instagram\",\"title\":\"Instagram\",\"url\":\"/\"}]},{\"id\":3,\"name\":\"Bobby Stanley\",\"image\":\"assets/img/doctors-grid/348x350-2.jpg\",\"rating\":5,\"specialist\":\"Obstetrics & Gynaecology\",\"location\":\"Hong Kong\",\"qualification\":\"University of California San Francisco Parnassus Campus\",\"experience\":5,\"available\":[\"Tue\",\"Wed\",\"Thu\",\"Fri\"],\"gender\":\"Female\",\"fees\":100,\"category\":[1,5],\"phone\":\"(741)376-5672\",\"email\":\"example@example.com\",\"htmltext\":\"<p> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p><div class='spacer'></div><h4>Subspecialities</h4><p> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard.</p><div class='row'><div class='col-lg-6'><div class='sigma_general-list style-3'><ul><li> <i class='far fa-check'></i> <span>Best Fitness Excercises</span></li><li> <i class='far fa-check'></i> <span>Combine Fitness and Lifestyle</span></li><li> <i class='far fa-check'></i> <span>Achieve a Specific Goal</span></li></ul></div></div><div class='col-lg-6'><div class='sigma_general-list style-3'><ul><li> <i class='far fa-check'></i> <span>Best Fitness Excercises</span></li><li> <i class='far fa-check'></i> <span>Combine Fitness and Lifestyle</span></li><li> <i class='far fa-check'></i> <span>Achieve a Specific Goal</span></li></ul></div></div></div>\",\"reviews\":[{\"user\":[1],\"commentdate\":\"07 March\",\"rating\":4,\"comment\":\"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.\"},{\"user\":[2],\"commentdate\":\"07 March\",\"rating\":5,\"comment\":\"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.\"},{\"user\":[3],\"commentdate\":\"07 March\",\"rating\":4,\"comment\":\"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.\"}],\"social\":[{\"icon\":\"fab fa-facebook-f\",\"title\":\"Facebook\",\"url\":\"/\"},{\"icon\":\"fab fa-twitter\",\"title\":\"Twitter\",\"url\":\"/\"},{\"icon\":\"fab fa-instagram\",\"title\":\"Instagram\",\"url\":\"/\"}]},{\"id\":4,\"name\":\"Kathryn Cooper\",\"image\":\"assets/img/doctors-grid/348x350-3.jpg\",\"rating\":4,\"specialist\":\"Obstetrics & Gynaecology\",\"location\":\"Hong Kong\",\"qualification\":\"University of California San Francisco Parnassus Campus\",\"experience\":5,\"available\":[],\"gender\":\"Female\",\"fees\":100,\"category\":[2,3],\"phone\":\"(741)376-5672\",\"email\":\"example@example.com\",\"htmltext\":\"<p> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p><div class='spacer'></div><h4>Subspecialities</h4><p> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard.</p><div class='row'><div class='col-lg-6'><div class='sigma_general-list style-3'><ul><li> <i class='far fa-check'></i> <span>Best Fitness Excercises</span></li><li> <i class='far fa-check'></i> <span>Combine Fitness and Lifestyle</span></li><li> <i class='far fa-check'></i> <span>Achieve a Specific Goal</span></li></ul></div></div><div class='col-lg-6'><div class='sigma_general-list style-3'><ul><li> <i class='far fa-check'></i> <span>Best Fitness Excercises</span></li><li> <i class='far fa-check'></i> <span>Combine Fitness and Lifestyle</span></li><li> <i class='far fa-check'></i> <span>Achieve a Specific Goal</span></li></ul></div></div></div>\",\"reviews\":[{\"user\":[1],\"commentdate\":\"07 March\",\"rating\":4,\"comment\":\"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.\"},{\"user\":[2],\"commentdate\":\"07 March\",\"rating\":5,\"comment\":\"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.\"},{\"user\":[3],\"commentdate\":\"07 March\",\"rating\":4,\"comment\":\"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.\"}],\"social\":[{\"icon\":\"fab fa-facebook-f\",\"title\":\"Facebook\",\"url\":\"/\"},{\"icon\":\"fab fa-twitter\",\"title\":\"Twitter\",\"url\":\"/\"},{\"icon\":\"fab fa-instagram\",\"title\":\"Instagram\",\"url\":\"/\"}]},{\"id\":5,\"name\":\"Carmen Nelson\",\"image\":\"assets/img/doctors-grid/348x350-4.jpg\",\"rating\":4,\"specialist\":\"Obstetrics & Gynaecology\",\"location\":\"Hong Kong\",\"qualification\":\"University of California San Francisco Parnassus Campus\",\"experience\":5,\"available\":[\"Tue\",\"Wed\",\"Thu\",\"Fri\"],\"gender\":\"Female\",\"fees\":\"\",\"category\":[4,5],\"phone\":\"(741)376-5672\",\"email\":\"example@example.com\",\"htmltext\":\"<p> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p><div class='spacer'></div><h4>Subspecialities</h4><p> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard.</p><div class='row'><div class='col-lg-6'><div class='sigma_general-list style-3'><ul><li> <i class='far fa-check'></i> <span>Best Fitness Excercises</span></li><li> <i class='far fa-check'></i> <span>Combine Fitness and Lifestyle</span></li><li> <i class='far fa-check'></i> <span>Achieve a Specific Goal</span></li></ul></div></div><div class='col-lg-6'><div class='sigma_general-list style-3'><ul><li> <i class='far fa-check'></i> <span>Best Fitness Excercises</span></li><li> <i class='far fa-check'></i> <span>Combine Fitness and Lifestyle</span></li><li> <i class='far fa-check'></i> <span>Achieve a Specific Goal</span></li></ul></div></div></div>\",\"reviews\":[{\"user\":[1],\"commentdate\":\"07 March\",\"rating\":4,\"comment\":\"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.\"},{\"user\":[2],\"commentdate\":\"07 March\",\"rating\":5,\"comment\":\"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.\"},{\"user\":[3],\"commentdate\":\"07 March\",\"rating\":4,\"comment\":\"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.\"}],\"social\":[{\"icon\":\"fab fa-facebook-f\",\"title\":\"Facebook\",\"url\":\"/\"},{\"icon\":\"fab fa-twitter\",\"title\":\"Twitter\",\"url\":\"/\"},{\"icon\":\"fab fa-instagram\",\"title\":\"Instagram\",\"url\":\"/\"}]},{\"id\":6,\"name\":\"Janice Hughes\",\"image\":\"assets/img/doctors-grid/348x350-5.jpg\",\"rating\":5,\"specialist\":\"Obstetrics & Gynaecology\",\"location\":\"Hong Kong\",\"qualification\":\"University of California San Francisco Parnassus Campus\",\"experience\":5,\"available\":[],\"gender\":\"Male\",\"fees\":100,\"category\":[1,2],\"phone\":\"(741)376-5672\",\"email\":\"example@example.com\",\"htmltext\":\"<p> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p><div class='spacer'></div><h4>Subspecialities</h4><p> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard.</p><div class='row'><div class='col-lg-6'><div class='sigma_general-list style-3'><ul><li> <i class='far fa-check'></i> <span>Best Fitness Excercises</span></li><li> <i class='far fa-check'></i> <span>Combine Fitness and Lifestyle</span></li><li> <i class='far fa-check'></i> <span>Achieve a Specific Goal</span></li></ul></div></div><div class='col-lg-6'><div class='sigma_general-list style-3'><ul><li> <i class='far fa-check'></i> <span>Best Fitness Excercises</span></li><li> <i class='far fa-check'></i> <span>Combine Fitness and Lifestyle</span></li><li> <i class='far fa-check'></i> <span>Achieve a Specific Goal</span></li></ul></div></div></div>\",\"reviews\":[{\"user\":[1],\"commentdate\":\"07 March\",\"rating\":4,\"comment\":\"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.\"},{\"user\":[2],\"commentdate\":\"07 March\",\"rating\":5,\"comment\":\"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.\"},{\"user\":[3],\"commentdate\":\"07 March\",\"rating\":4,\"comment\":\"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.\"}],\"social\":[{\"icon\":\"fab fa-facebook-f\",\"title\":\"Facebook\",\"url\":\"/\"},{\"icon\":\"fab fa-twitter\",\"title\":\"Twitter\",\"url\":\"/\"},{\"icon\":\"fab fa-instagram\",\"title\":\"Instagram\",\"url\":\"/\"}]}]");
       /***/
     },
 
     /***/
-    "wBg8": function wBg8(module, __webpack_exports__, __webpack_require__) {
+    "wBg8":
+    /*!***************************************************************************************!*\
+      !*** ./src/app/components/shared/fab-button/fab-button.component.css.shim.ngstyle.js ***!
+      \***************************************************************************************/
+
+    /*! exports provided: styles */
+
+    /***/
+    function wBg8(module, __webpack_exports__, __webpack_require__) {
       "use strict";
 
       __webpack_require__.r(__webpack_exports__);
@@ -1908,7 +2022,7 @@
        */
 
 
-      var styles = ["*[_ngcontent-%COMP%] {\r\n    box-sizing: border-box;\r\n  }\r\n  \r\n  .fab-wrapper[_ngcontent-%COMP%] {\r\n    position: fixed;\r\n    bottom: 3rem;\r\n    right: 3rem;\r\n    z-index: 9999999 !important;\r\n\r\n  }\r\n  \r\n  .fab-button[_ngcontent-%COMP%] {\r\n    display: flex;\r\n    justify-content: center;\r\n    align-items: center;\r\n    position: absolute;\r\n    bottom: -1rem;\r\n    right: -1rem;\r\n    width: 4rem;\r\n    height: 4rem;\r\n    background: #25D366;\r\n    border-radius: 50%;\r\n    background: #25D366;\r\n    box-shadow: 0px 5px 20px #93e0af;\r\n    transition: all 0.3s ease;\r\n    border-bottom-right-radius: 6px;\r\n    border: 1px solid #25D366;\r\n    cursor: pointer !important;\r\n  }\r\n  \r\n  .fab-content[_ngcontent-%COMP%] {\r\n    display: flex;\r\n    justify-content: center;\r\n    align-items: center;\r\n  }\r\n  \r\n  .icon-fab[_ngcontent-%COMP%]{\r\n    color: #FFFFFF !important;\r\n    font-size: 25px !important;\r\n  }\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImZhYi1idXR0b24uY29tcG9uZW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtJQUNJLHNCQUFzQjtFQUN4Qjs7RUFFQTtJQUNFLGVBQWU7SUFDZixZQUFZO0lBQ1osV0FBVztJQUNYLDJCQUEyQjs7RUFFN0I7O0VBQ0E7SUFDRSxhQUFhO0lBQ2IsdUJBQXVCO0lBQ3ZCLG1CQUFtQjtJQUNuQixrQkFBa0I7SUFDbEIsYUFBYTtJQUNiLFlBQVk7SUFDWixXQUFXO0lBQ1gsWUFBWTtJQUNaLG1CQUFtQjtJQUNuQixrQkFBa0I7SUFDbEIsbUJBQW1CO0lBQ25CLGdDQUFnQztJQUNoQyx5QkFBeUI7SUFDekIsK0JBQStCO0lBQy9CLHlCQUF5QjtJQUN6QiwwQkFBMEI7RUFDNUI7O0VBRUE7SUFDRSxhQUFhO0lBQ2IsdUJBQXVCO0lBQ3ZCLG1CQUFtQjtFQUNyQjs7RUFFQTtJQUNFLHlCQUF5QjtJQUN6QiwwQkFBMEI7RUFDNUIiLCJmaWxlIjoiZmFiLWJ1dHRvbi5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiKiB7XHJcbiAgICBib3gtc2l6aW5nOiBib3JkZXItYm94O1xyXG4gIH1cclxuICBcclxuICAuZmFiLXdyYXBwZXIge1xyXG4gICAgcG9zaXRpb246IGZpeGVkO1xyXG4gICAgYm90dG9tOiAzcmVtO1xyXG4gICAgcmlnaHQ6IDNyZW07XHJcbiAgICB6LWluZGV4OiA5OTk5OTk5ICFpbXBvcnRhbnQ7XHJcblxyXG4gIH1cclxuICAuZmFiLWJ1dHRvbiB7XHJcbiAgICBkaXNwbGF5OiBmbGV4O1xyXG4gICAganVzdGlmeS1jb250ZW50OiBjZW50ZXI7XHJcbiAgICBhbGlnbi1pdGVtczogY2VudGVyO1xyXG4gICAgcG9zaXRpb246IGFic29sdXRlO1xyXG4gICAgYm90dG9tOiAtMXJlbTtcclxuICAgIHJpZ2h0OiAtMXJlbTtcclxuICAgIHdpZHRoOiA0cmVtO1xyXG4gICAgaGVpZ2h0OiA0cmVtO1xyXG4gICAgYmFja2dyb3VuZDogIzI1RDM2NjtcclxuICAgIGJvcmRlci1yYWRpdXM6IDUwJTtcclxuICAgIGJhY2tncm91bmQ6ICMyNUQzNjY7XHJcbiAgICBib3gtc2hhZG93OiAwcHggNXB4IDIwcHggIzkzZTBhZjtcclxuICAgIHRyYW5zaXRpb246IGFsbCAwLjNzIGVhc2U7XHJcbiAgICBib3JkZXItYm90dG9tLXJpZ2h0LXJhZGl1czogNnB4O1xyXG4gICAgYm9yZGVyOiAxcHggc29saWQgIzI1RDM2NjtcclxuICAgIGN1cnNvcjogcG9pbnRlciAhaW1wb3J0YW50O1xyXG4gIH1cclxuXHJcbiAgLmZhYi1jb250ZW50IHtcclxuICAgIGRpc3BsYXk6IGZsZXg7XHJcbiAgICBqdXN0aWZ5LWNvbnRlbnQ6IGNlbnRlcjtcclxuICAgIGFsaWduLWl0ZW1zOiBjZW50ZXI7XHJcbiAgfVxyXG4gIFxyXG4gIC5pY29uLWZhYntcclxuICAgIGNvbG9yOiAjRkZGRkZGICFpbXBvcnRhbnQ7XHJcbiAgICBmb250LXNpemU6IDI1cHggIWltcG9ydGFudDtcclxuICB9XHJcbiJdfQ== */"];
+      var styles = ["*[_ngcontent-%COMP%] {\n    box-sizing: border-box;\n  }\n  \n  .fab-wrapper[_ngcontent-%COMP%] {\n    position: fixed;\n    bottom: 3rem;\n    right: 3rem;\n    z-index: 9999999 !important;\n\n  }\n  \n  .fab-button[_ngcontent-%COMP%] {\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    position: absolute;\n    bottom: -1rem;\n    right: -1rem;\n    width: 4rem;\n    height: 4rem;\n    background: #25D366;\n    border-radius: 50%;\n    background: #25D366;\n    box-shadow: 0px 5px 20px #93e0af;\n    transition: all 0.3s ease;\n    border-bottom-right-radius: 6px;\n    border: 1px solid #25D366;\n    cursor: pointer !important;\n  }\n  \n  .fab-content[_ngcontent-%COMP%] {\n    display: flex;\n    justify-content: center;\n    align-items: center;\n  }\n  \n  .icon-fab[_ngcontent-%COMP%]{\n    color: #FFFFFF !important;\n    font-size: 25px !important;\n  }\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImZhYi1idXR0b24uY29tcG9uZW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtJQUNJLHNCQUFzQjtFQUN4Qjs7RUFFQTtJQUNFLGVBQWU7SUFDZixZQUFZO0lBQ1osV0FBVztJQUNYLDJCQUEyQjs7RUFFN0I7O0VBQ0E7SUFDRSxhQUFhO0lBQ2IsdUJBQXVCO0lBQ3ZCLG1CQUFtQjtJQUNuQixrQkFBa0I7SUFDbEIsYUFBYTtJQUNiLFlBQVk7SUFDWixXQUFXO0lBQ1gsWUFBWTtJQUNaLG1CQUFtQjtJQUNuQixrQkFBa0I7SUFDbEIsbUJBQW1CO0lBQ25CLGdDQUFnQztJQUNoQyx5QkFBeUI7SUFDekIsK0JBQStCO0lBQy9CLHlCQUF5QjtJQUN6QiwwQkFBMEI7RUFDNUI7O0VBRUE7SUFDRSxhQUFhO0lBQ2IsdUJBQXVCO0lBQ3ZCLG1CQUFtQjtFQUNyQjs7RUFFQTtJQUNFLHlCQUF5QjtJQUN6QiwwQkFBMEI7RUFDNUIiLCJmaWxlIjoiZmFiLWJ1dHRvbi5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiKiB7XG4gICAgYm94LXNpemluZzogYm9yZGVyLWJveDtcbiAgfVxuICBcbiAgLmZhYi13cmFwcGVyIHtcbiAgICBwb3NpdGlvbjogZml4ZWQ7XG4gICAgYm90dG9tOiAzcmVtO1xuICAgIHJpZ2h0OiAzcmVtO1xuICAgIHotaW5kZXg6IDk5OTk5OTkgIWltcG9ydGFudDtcblxuICB9XG4gIC5mYWItYnV0dG9uIHtcbiAgICBkaXNwbGF5OiBmbGV4O1xuICAgIGp1c3RpZnktY29udGVudDogY2VudGVyO1xuICAgIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gICAgcG9zaXRpb246IGFic29sdXRlO1xuICAgIGJvdHRvbTogLTFyZW07XG4gICAgcmlnaHQ6IC0xcmVtO1xuICAgIHdpZHRoOiA0cmVtO1xuICAgIGhlaWdodDogNHJlbTtcbiAgICBiYWNrZ3JvdW5kOiAjMjVEMzY2O1xuICAgIGJvcmRlci1yYWRpdXM6IDUwJTtcbiAgICBiYWNrZ3JvdW5kOiAjMjVEMzY2O1xuICAgIGJveC1zaGFkb3c6IDBweCA1cHggMjBweCAjOTNlMGFmO1xuICAgIHRyYW5zaXRpb246IGFsbCAwLjNzIGVhc2U7XG4gICAgYm9yZGVyLWJvdHRvbS1yaWdodC1yYWRpdXM6IDZweDtcbiAgICBib3JkZXI6IDFweCBzb2xpZCAjMjVEMzY2O1xuICAgIGN1cnNvcjogcG9pbnRlciAhaW1wb3J0YW50O1xuICB9XG5cbiAgLmZhYi1jb250ZW50IHtcbiAgICBkaXNwbGF5OiBmbGV4O1xuICAgIGp1c3RpZnktY29udGVudDogY2VudGVyO1xuICAgIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gIH1cbiAgXG4gIC5pY29uLWZhYntcbiAgICBjb2xvcjogI0ZGRkZGRiAhaW1wb3J0YW50O1xuICAgIGZvbnQtc2l6ZTogMjVweCAhaW1wb3J0YW50O1xuICB9XG4iXX0= */"];
       /***/
     }
   }]);
