@@ -215,6 +215,19 @@ class RecaptchaComponent {
             this.grecaptchaReset();
         }
     }
+    /**
+     * ⚠️ Warning! Use this property at your own risk!
+     *
+     * While this member is `public`, it is not a part of the component's public API.
+     * The semantic versioning guarantees _will not be honored_! Thus, you might find that this property behavior changes in incompatible ways in minor or even patch releases.
+     * You are **strongly advised** against using this property.
+     * Instead, use more idiomatic ways to get reCAPTCHA value, such as `resolved` EventEmitter, or form-bound methods (ngModel, formControl, and the likes).å
+     */
+    get __unsafe_widgetValue() {
+        return this.widget != null
+            ? this.grecaptcha.getResponse(this.widget)
+            : null;
+    }
     /** @internal */
     expired() {
         this.resolved.emit(null);
@@ -442,14 +455,30 @@ RecaptchaV3Module.decorators = [
 class RecaptchaValueAccessorDirective {
     constructor(host) {
         this.host = host;
+        this.requiresControllerReset = false;
     }
     writeValue(value) {
         if (!value) {
             this.host.reset();
         }
+        else {
+            // In this case, it is most likely that a form controller has requested to write a specific value into the component.
+            // This isn't really a supported case - reCAPTCHA values are single-use, and, in a sense, readonly.
+            // What this means is that the form controller has recaptcha control state of X, while reCAPTCHA itself can't "restore"
+            // to that state. In order to make form controller aware of this discrepancy, and to fix the said misalignment,
+            // we'll be telling the controller to "reset" the value back to null.
+            if (this.host.__unsafe_widgetValue !== value &&
+                Boolean(this.host.__unsafe_widgetValue) === false) {
+                this.requiresControllerReset = true;
+            }
+        }
     }
     registerOnChange(fn) {
         this.onChange = fn;
+        if (this.requiresControllerReset) {
+            this.requiresControllerReset = false;
+            this.onChange(null);
+        }
     }
     registerOnTouched(fn) {
         this.onTouched = fn;
@@ -603,7 +632,7 @@ __webpack_require__.r(__webpack_exports__);
  * @suppress {suspiciousCode,uselessCode,missingProperties,missingOverride,checkTypes,extraRequire}
  * tslint:disable
  */
-var styles = ["*[_ngcontent-%COMP%] {\r\n    box-sizing: border-box;\r\n  }\r\n  \r\n  .fab-wrapper[_ngcontent-%COMP%] {\r\n    position: fixed;\r\n    bottom: 3rem;\r\n    right: 3rem;\r\n    z-index: 9999999 !important;\r\n\r\n  }\r\n  \r\n  .fab-button[_ngcontent-%COMP%] {\r\n    display: flex;\r\n    justify-content: center;\r\n    align-items: center;\r\n    position: absolute;\r\n    bottom: -1rem;\r\n    right: -1rem;\r\n    width: 4rem;\r\n    height: 4rem;\r\n    background: #25D366;\r\n    border-radius: 50%;\r\n    background: #25D366;\r\n    box-shadow: 0px 5px 20px #93e0af;\r\n    transition: all 0.3s ease;\r\n    border-bottom-right-radius: 6px;\r\n    border: 1px solid #25D366;\r\n    cursor: pointer !important;\r\n  }\r\n  \r\n  .fab-content[_ngcontent-%COMP%] {\r\n    display: flex;\r\n    justify-content: center;\r\n    align-items: center;\r\n  }\r\n  \r\n  .icon-fab[_ngcontent-%COMP%]{\r\n    color: #FFFFFF !important;\r\n    font-size: 25px !important;\r\n  }\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImZhYi1idXR0b24uY29tcG9uZW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtJQUNJLHNCQUFzQjtFQUN4Qjs7RUFFQTtJQUNFLGVBQWU7SUFDZixZQUFZO0lBQ1osV0FBVztJQUNYLDJCQUEyQjs7RUFFN0I7O0VBQ0E7SUFDRSxhQUFhO0lBQ2IsdUJBQXVCO0lBQ3ZCLG1CQUFtQjtJQUNuQixrQkFBa0I7SUFDbEIsYUFBYTtJQUNiLFlBQVk7SUFDWixXQUFXO0lBQ1gsWUFBWTtJQUNaLG1CQUFtQjtJQUNuQixrQkFBa0I7SUFDbEIsbUJBQW1CO0lBQ25CLGdDQUFnQztJQUNoQyx5QkFBeUI7SUFDekIsK0JBQStCO0lBQy9CLHlCQUF5QjtJQUN6QiwwQkFBMEI7RUFDNUI7O0VBRUE7SUFDRSxhQUFhO0lBQ2IsdUJBQXVCO0lBQ3ZCLG1CQUFtQjtFQUNyQjs7RUFFQTtJQUNFLHlCQUF5QjtJQUN6QiwwQkFBMEI7RUFDNUIiLCJmaWxlIjoiZmFiLWJ1dHRvbi5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiKiB7XHJcbiAgICBib3gtc2l6aW5nOiBib3JkZXItYm94O1xyXG4gIH1cclxuICBcclxuICAuZmFiLXdyYXBwZXIge1xyXG4gICAgcG9zaXRpb246IGZpeGVkO1xyXG4gICAgYm90dG9tOiAzcmVtO1xyXG4gICAgcmlnaHQ6IDNyZW07XHJcbiAgICB6LWluZGV4OiA5OTk5OTk5ICFpbXBvcnRhbnQ7XHJcblxyXG4gIH1cclxuICAuZmFiLWJ1dHRvbiB7XHJcbiAgICBkaXNwbGF5OiBmbGV4O1xyXG4gICAganVzdGlmeS1jb250ZW50OiBjZW50ZXI7XHJcbiAgICBhbGlnbi1pdGVtczogY2VudGVyO1xyXG4gICAgcG9zaXRpb246IGFic29sdXRlO1xyXG4gICAgYm90dG9tOiAtMXJlbTtcclxuICAgIHJpZ2h0OiAtMXJlbTtcclxuICAgIHdpZHRoOiA0cmVtO1xyXG4gICAgaGVpZ2h0OiA0cmVtO1xyXG4gICAgYmFja2dyb3VuZDogIzI1RDM2NjtcclxuICAgIGJvcmRlci1yYWRpdXM6IDUwJTtcclxuICAgIGJhY2tncm91bmQ6ICMyNUQzNjY7XHJcbiAgICBib3gtc2hhZG93OiAwcHggNXB4IDIwcHggIzkzZTBhZjtcclxuICAgIHRyYW5zaXRpb246IGFsbCAwLjNzIGVhc2U7XHJcbiAgICBib3JkZXItYm90dG9tLXJpZ2h0LXJhZGl1czogNnB4O1xyXG4gICAgYm9yZGVyOiAxcHggc29saWQgIzI1RDM2NjtcclxuICAgIGN1cnNvcjogcG9pbnRlciAhaW1wb3J0YW50O1xyXG4gIH1cclxuXHJcbiAgLmZhYi1jb250ZW50IHtcclxuICAgIGRpc3BsYXk6IGZsZXg7XHJcbiAgICBqdXN0aWZ5LWNvbnRlbnQ6IGNlbnRlcjtcclxuICAgIGFsaWduLWl0ZW1zOiBjZW50ZXI7XHJcbiAgfVxyXG4gIFxyXG4gIC5pY29uLWZhYntcclxuICAgIGNvbG9yOiAjRkZGRkZGICFpbXBvcnRhbnQ7XHJcbiAgICBmb250LXNpemU6IDI1cHggIWltcG9ydGFudDtcclxuICB9XHJcbiJdfQ== */"];
+var styles = ["*[_ngcontent-%COMP%] {\n    box-sizing: border-box;\n  }\n  \n  .fab-wrapper[_ngcontent-%COMP%] {\n    position: fixed;\n    bottom: 3rem;\n    right: 3rem;\n    z-index: 9999999 !important;\n\n  }\n  \n  .fab-button[_ngcontent-%COMP%] {\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    position: absolute;\n    bottom: -1rem;\n    right: -1rem;\n    width: 4rem;\n    height: 4rem;\n    background: #25D366;\n    border-radius: 50%;\n    background: #25D366;\n    box-shadow: 0px 5px 20px #93e0af;\n    transition: all 0.3s ease;\n    border-bottom-right-radius: 6px;\n    border: 1px solid #25D366;\n    cursor: pointer !important;\n  }\n  \n  .fab-content[_ngcontent-%COMP%] {\n    display: flex;\n    justify-content: center;\n    align-items: center;\n  }\n  \n  .icon-fab[_ngcontent-%COMP%]{\n    color: #FFFFFF !important;\n    font-size: 25px !important;\n  }\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImZhYi1idXR0b24uY29tcG9uZW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtJQUNJLHNCQUFzQjtFQUN4Qjs7RUFFQTtJQUNFLGVBQWU7SUFDZixZQUFZO0lBQ1osV0FBVztJQUNYLDJCQUEyQjs7RUFFN0I7O0VBQ0E7SUFDRSxhQUFhO0lBQ2IsdUJBQXVCO0lBQ3ZCLG1CQUFtQjtJQUNuQixrQkFBa0I7SUFDbEIsYUFBYTtJQUNiLFlBQVk7SUFDWixXQUFXO0lBQ1gsWUFBWTtJQUNaLG1CQUFtQjtJQUNuQixrQkFBa0I7SUFDbEIsbUJBQW1CO0lBQ25CLGdDQUFnQztJQUNoQyx5QkFBeUI7SUFDekIsK0JBQStCO0lBQy9CLHlCQUF5QjtJQUN6QiwwQkFBMEI7RUFDNUI7O0VBRUE7SUFDRSxhQUFhO0lBQ2IsdUJBQXVCO0lBQ3ZCLG1CQUFtQjtFQUNyQjs7RUFFQTtJQUNFLHlCQUF5QjtJQUN6QiwwQkFBMEI7RUFDNUIiLCJmaWxlIjoiZmFiLWJ1dHRvbi5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiKiB7XG4gICAgYm94LXNpemluZzogYm9yZGVyLWJveDtcbiAgfVxuICBcbiAgLmZhYi13cmFwcGVyIHtcbiAgICBwb3NpdGlvbjogZml4ZWQ7XG4gICAgYm90dG9tOiAzcmVtO1xuICAgIHJpZ2h0OiAzcmVtO1xuICAgIHotaW5kZXg6IDk5OTk5OTkgIWltcG9ydGFudDtcblxuICB9XG4gIC5mYWItYnV0dG9uIHtcbiAgICBkaXNwbGF5OiBmbGV4O1xuICAgIGp1c3RpZnktY29udGVudDogY2VudGVyO1xuICAgIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gICAgcG9zaXRpb246IGFic29sdXRlO1xuICAgIGJvdHRvbTogLTFyZW07XG4gICAgcmlnaHQ6IC0xcmVtO1xuICAgIHdpZHRoOiA0cmVtO1xuICAgIGhlaWdodDogNHJlbTtcbiAgICBiYWNrZ3JvdW5kOiAjMjVEMzY2O1xuICAgIGJvcmRlci1yYWRpdXM6IDUwJTtcbiAgICBiYWNrZ3JvdW5kOiAjMjVEMzY2O1xuICAgIGJveC1zaGFkb3c6IDBweCA1cHggMjBweCAjOTNlMGFmO1xuICAgIHRyYW5zaXRpb246IGFsbCAwLjNzIGVhc2U7XG4gICAgYm9yZGVyLWJvdHRvbS1yaWdodC1yYWRpdXM6IDZweDtcbiAgICBib3JkZXI6IDFweCBzb2xpZCAjMjVEMzY2O1xuICAgIGN1cnNvcjogcG9pbnRlciAhaW1wb3J0YW50O1xuICB9XG5cbiAgLmZhYi1jb250ZW50IHtcbiAgICBkaXNwbGF5OiBmbGV4O1xuICAgIGp1c3RpZnktY29udGVudDogY2VudGVyO1xuICAgIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gIH1cbiAgXG4gIC5pY29uLWZhYntcbiAgICBjb2xvcjogI0ZGRkZGRiAhaW1wb3J0YW50O1xuICAgIGZvbnQtc2l6ZTogMjVweCAhaW1wb3J0YW50O1xuICB9XG4iXX0= */"];
 
 
 

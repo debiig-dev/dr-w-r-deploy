@@ -1,27 +1,39 @@
 (function () {
-  function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+  function _callSuper(t, o, e) { return o = _getPrototypeOf(o), _possibleConstructorReturn(t, _isNativeReflectConstruct() ? Reflect.construct(o, e || [], _getPrototypeOf(t).constructor) : o.apply(t, e)); }
 
-  function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+  function _possibleConstructorReturn(t, e) { if (e && ("object" == typeof e || "function" == typeof e)) return e; if (void 0 !== e) throw new TypeError("Derived constructors may only return object or undefined"); return _assertThisInitialized(t); }
 
-  function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+  function _assertThisInitialized(e) { if (void 0 === e) throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); return e; }
 
-  function _possibleConstructorReturn(self, call) { if (call && (typeof call === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+  function _isNativeReflectConstruct() { try { var t = !Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); } catch (t) {} return (_isNativeReflectConstruct = function _isNativeReflectConstruct() { return !!t; })(); }
 
-  function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+  function _getPrototypeOf(t) { return _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf.bind() : function (t) { return t.__proto__ || Object.getPrototypeOf(t); }, _getPrototypeOf(t); }
 
-  function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
+  function _inherits(t, e) { if ("function" != typeof e && null !== e) throw new TypeError("Super expression must either be null or a function"); t.prototype = Object.create(e && e.prototype, { constructor: { value: t, writable: !0, configurable: !0 } }), Object.defineProperty(t, "prototype", { writable: !1 }), e && _setPrototypeOf(t, e); }
 
-  function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+  function _setPrototypeOf(t, e) { return _setPrototypeOf = Object.setPrototypeOf ? Object.setPrototypeOf.bind() : function (t, e) { return t.__proto__ = e, t; }, _setPrototypeOf(t, e); }
 
-  function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+  function _classCallCheck(a, n) { if (!(a instanceof n)) throw new TypeError("Cannot call a class as a function"); }
 
-  function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+  function _defineProperties(e, r) { for (var t = 0; t < r.length; t++) { var o = r[t]; o.enumerable = o.enumerable || !1, o.configurable = !0, "value" in o && (o.writable = !0), Object.defineProperty(e, _toPropertyKey(o.key), o); } }
 
-  function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+  function _createClass(e, r, t) { return r && _defineProperties(e.prototype, r), t && _defineProperties(e, t), Object.defineProperty(e, "prototype", { writable: !1 }), e; }
+
+  function _toPropertyKey(t) { var i = _toPrimitive(t, "string"); return "symbol" == typeof i ? i : i + ""; }
+
+  function _toPrimitive(t, r) { if ("object" != typeof t || !t) return t; var e = t[Symbol.toPrimitive]; if (void 0 !== e) { var i = e.call(t, r || "default"); if ("object" != typeof i) return i; throw new TypeError("@@toPrimitive must return a primitive value."); } return ("string" === r ? String : Number)(t); }
 
   (window["webpackJsonp"] = window["webpackJsonp"] || []).push([["components-pages-home-two-home-two-module-ngfactory"], {
     /***/
-    "/H1e": function H1e(module, __webpack_exports__, __webpack_require__) {
+    "/H1e":
+    /*!**********************************************************************************!*\
+      !*** ./src/app/components/pages/home-two/home-two.component.css.shim.ngstyle.js ***!
+      \**********************************************************************************/
+
+    /*! exports provided: styles */
+
+    /***/
+    function _H1e(module, __webpack_exports__, __webpack_require__) {
       "use strict";
 
       __webpack_require__.r(__webpack_exports__);
@@ -44,7 +56,15 @@
     },
 
     /***/
-    "3wgI": function wgI(module, __webpack_exports__, __webpack_require__) {
+    "3wgI":
+    /*!********************************************************************!*\
+      !*** ./src/app/components/pages/home-two/quote/quote.component.ts ***!
+      \********************************************************************/
+
+    /*! exports provided: QuoteComponent */
+
+    /***/
+    function wgI(module, __webpack_exports__, __webpack_require__) {
       "use strict";
 
       __webpack_require__.r(__webpack_exports__);
@@ -85,7 +105,7 @@
           });
         }
 
-        _createClass(QuoteComponent, [{
+        return _createClass(QuoteComponent, [{
           key: "onSubmit",
           value: function onSubmit() {
             var _this = this;
@@ -128,15 +148,21 @@
           key: "ngOnInit",
           value: function ngOnInit() {}
         }]);
-
-        return QuoteComponent;
       }();
       /***/
 
     },
 
     /***/
-    "6uZ1": function uZ1(module, __webpack_exports__, __webpack_require__) {
+    "6uZ1":
+    /*!***************************************************************************!*\
+      !*** ./src/app/components/pages/home-two/home-two.component.ngfactory.js ***!
+      \***************************************************************************/
+
+    /*! exports provided: RenderType_HomeTwoComponent, View_HomeTwoComponent_0, View_HomeTwoComponent_Host_0, HomeTwoComponentNgFactory */
+
+    /***/
+    function uZ1(module, __webpack_exports__, __webpack_require__) {
       "use strict";
 
       __webpack_require__.r(__webpack_exports__);
@@ -375,7 +401,15 @@
     },
 
     /***/
-    "Bd/k": function BdK(module, __webpack_exports__, __webpack_require__) {
+    "Bd/k":
+    /*!************************************************************************!*\
+      !*** ./src/app/components/pages/home-two/home-two.module.ngfactory.js ***!
+      \************************************************************************/
+
+    /*! exports provided: HomeTwoModuleNgFactory */
+
+    /***/
+    function Bd_k(module, __webpack_exports__, __webpack_require__) {
       "use strict";
 
       __webpack_require__.r(__webpack_exports__);
@@ -514,7 +548,15 @@
     },
 
     /***/
-    "ELzH": function ELzH(module, __webpack_exports__, __webpack_require__) {
+    "ELzH":
+    /*!**********************************************************************************!*\
+      !*** ./src/app/components/pages/home-two/services-two/services-two.component.ts ***!
+      \**********************************************************************************/
+
+    /*! exports provided: ServicesTwoComponent */
+
+    /***/
+    function ELzH(module, __webpack_exports__, __webpack_require__) {
       "use strict";
 
       __webpack_require__.r(__webpack_exports__);
@@ -544,17 +586,15 @@
       "iInd");
 
       var ServicesTwoComponent = /*#__PURE__*/function (_src_app_components_h) {
-        _inherits(ServicesTwoComponent, _src_app_components_h);
-
-        var _super = _createSuper(ServicesTwoComponent);
-
         function ServicesTwoComponent() {
           _classCallCheck(this, ServicesTwoComponent);
 
-          return _super.apply(this, arguments);
+          return _callSuper(this, ServicesTwoComponent, arguments);
         }
 
-        return ServicesTwoComponent;
+        _inherits(ServicesTwoComponent, _src_app_components_h);
+
+        return _createClass(ServicesTwoComponent);
       }(src_app_components_helper_service_service_helper_service__WEBPACK_IMPORTED_MODULE_0__["ServiceHelperService"]);
 
       ServicesTwoComponent.ɵprov = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineInjectable"]({
@@ -568,7 +608,15 @@
     },
 
     /***/
-    "GiOn": function GiOn(module, __webpack_exports__, __webpack_require__) {
+    "GiOn":
+    /*!*****************************************************!*\
+      !*** ./node_modules/countup.js/dist/countUp.min.js ***!
+      \*****************************************************/
+
+    /*! exports provided: CountUp */
+
+    /***/
+    function GiOn(module, __webpack_exports__, __webpack_require__) {
       "use strict";
 
       __webpack_require__.r(__webpack_exports__);
@@ -576,105 +624,134 @@
 
 
       __webpack_require__.d(__webpack_exports__, "CountUp", function () {
-        return CountUp;
+        return i;
       });
 
-      var __assign = undefined && undefined.__assign || function () {
-        return (__assign = Object.assign || function (t) {
-          for (var i, a = 1, s = arguments.length; a < s; a++) {
-            for (var n in i = arguments[a]) {
-              Object.prototype.hasOwnProperty.call(i, n) && (t[n] = i[n]);
-            }
-          }
+      var _t = function t() {
+        return _t = Object.assign || function (t) {
+          for (var i, n = 1, s = arguments.length; n < s; n++) for (var a in i = arguments[n]) Object.prototype.hasOwnProperty.call(i, a) && (t[a] = i[a]);
 
           return t;
-        }).apply(this, arguments);
+        }, _t.apply(this, arguments);
       },
-          CountUp = function () {
-        function t(t, i, a) {
-          var s = this;
-          this.target = t, this.endVal = i, this.options = a, this.version = "2.0.7", this.defaults = {
+          i = function () {
+        function i(i, n, s) {
+          var a = this;
+          this.endVal = n, this.options = s, this.version = "2.8.0", this.defaults = {
             startVal: 0,
             decimalPlaces: 0,
             duration: 2,
             useEasing: !0,
             useGrouping: !0,
+            useIndianSeparators: !1,
             smartEasingThreshold: 999,
             smartEasingAmount: 333,
             separator: ",",
             decimal: ".",
             prefix: "",
-            suffix: ""
-          }, this.finalEndVal = null, this.useEasing = !0, this.countDown = !1, this.error = "", this.startVal = 0, this.paused = !0, this.count = function (t) {
-            s.startTime || (s.startTime = t);
-            var i = t - s.startTime;
-            s.remaining = s.duration - i, s.useEasing ? s.countDown ? s.frameVal = s.startVal - s.easingFn(i, 0, s.startVal - s.endVal, s.duration) : s.frameVal = s.easingFn(i, s.startVal, s.endVal - s.startVal, s.duration) : s.countDown ? s.frameVal = s.startVal - (s.startVal - s.endVal) * (i / s.duration) : s.frameVal = s.startVal + (s.endVal - s.startVal) * (i / s.duration), s.countDown ? s.frameVal = s.frameVal < s.endVal ? s.endVal : s.frameVal : s.frameVal = s.frameVal > s.endVal ? s.endVal : s.frameVal, s.frameVal = Number(s.frameVal.toFixed(s.options.decimalPlaces)), s.printValue(s.frameVal), i < s.duration ? s.rAF = requestAnimationFrame(s.count) : null !== s.finalEndVal ? s.update(s.finalEndVal) : s.callback && s.callback();
+            suffix: "",
+            enableScrollSpy: !1,
+            scrollSpyDelay: 200,
+            scrollSpyOnce: !1
+          }, this.finalEndVal = null, this.useEasing = !0, this.countDown = !1, this.error = "", this.startVal = 0, this.paused = !0, this.once = !1, this.count = function (t) {
+            a.startTime || (a.startTime = t);
+            var i = t - a.startTime;
+            a.remaining = a.duration - i, a.useEasing ? a.countDown ? a.frameVal = a.startVal - a.easingFn(i, 0, a.startVal - a.endVal, a.duration) : a.frameVal = a.easingFn(i, a.startVal, a.endVal - a.startVal, a.duration) : a.frameVal = a.startVal + (a.endVal - a.startVal) * (i / a.duration);
+            var n = a.countDown ? a.frameVal < a.endVal : a.frameVal > a.endVal;
+            a.frameVal = n ? a.endVal : a.frameVal, a.frameVal = Number(a.frameVal.toFixed(a.options.decimalPlaces)), a.printValue(a.frameVal), i < a.duration ? a.rAF = requestAnimationFrame(a.count) : null !== a.finalEndVal ? a.update(a.finalEndVal) : a.options.onCompleteCallback && a.options.onCompleteCallback();
           }, this.formatNumber = function (t) {
             var i,
-                a,
                 n,
+                s,
                 e,
-                r,
                 o = t < 0 ? "-" : "";
+            i = Math.abs(t).toFixed(a.options.decimalPlaces);
+            var r = (i += "").split(".");
 
-            if (i = Math.abs(t).toFixed(s.options.decimalPlaces), n = (a = (i += "").split("."))[0], e = a.length > 1 ? s.options.decimal + a[1] : "", s.options.useGrouping) {
-              r = "";
+            if (n = r[0], s = r.length > 1 ? a.options.decimal + r[1] : "", a.options.useGrouping) {
+              e = "";
 
-              for (var l = 0, h = n.length; l < h; ++l) {
-                0 !== l && l % 3 == 0 && (r = s.options.separator + r), r = n[h - l - 1] + r;
-              }
+              for (var l = 3, h = 0, u = 0, p = n.length; u < p; ++u) a.options.useIndianSeparators && 4 === u && (l = 2, h = 1), 0 !== u && h % l == 0 && (e = a.options.separator + e), h++, e = n[p - u - 1] + e;
 
-              n = r;
+              n = e;
             }
 
-            return s.options.numerals && s.options.numerals.length && (n = n.replace(/[0-9]/g, function (t) {
-              return s.options.numerals[+t];
-            }), e = e.replace(/[0-9]/g, function (t) {
-              return s.options.numerals[+t];
-            })), o + s.options.prefix + n + e + s.options.suffix;
-          }, this.easeOutExpo = function (t, i, a, s) {
-            return a * (1 - Math.pow(2, -10 * t / s)) * 1024 / 1023 + i;
-          }, this.options = __assign(__assign({}, this.defaults), a), this.formattingFn = this.options.formattingFn ? this.options.formattingFn : this.formatNumber, this.easingFn = this.options.easingFn ? this.options.easingFn : this.easeOutExpo, this.startVal = this.validateValue(this.options.startVal), this.frameVal = this.startVal, this.endVal = this.validateValue(i), this.options.decimalPlaces = Math.max(this.options.decimalPlaces), this.resetDuration(), this.options.separator = String(this.options.separator), this.useEasing = this.options.useEasing, "" === this.options.separator && (this.options.useGrouping = !1), this.el = "string" == typeof t ? document.getElementById(t) : t, this.el ? this.printValue(this.startVal) : this.error = "[CountUp] target is null or undefined";
+            return a.options.numerals && a.options.numerals.length && (n = n.replace(/[0-9]/g, function (t) {
+              return a.options.numerals[+t];
+            }), s = s.replace(/[0-9]/g, function (t) {
+              return a.options.numerals[+t];
+            })), o + a.options.prefix + n + s + a.options.suffix;
+          }, this.easeOutExpo = function (t, i, n, s) {
+            return n * (1 - Math.pow(2, -10 * t / s)) * 1024 / 1023 + i;
+          }, this.options = _t(_t({}, this.defaults), s), this.formattingFn = this.options.formattingFn ? this.options.formattingFn : this.formatNumber, this.easingFn = this.options.easingFn ? this.options.easingFn : this.easeOutExpo, this.startVal = this.validateValue(this.options.startVal), this.frameVal = this.startVal, this.endVal = this.validateValue(n), this.options.decimalPlaces = Math.max(this.options.decimalPlaces), this.resetDuration(), this.options.separator = String(this.options.separator), this.useEasing = this.options.useEasing, "" === this.options.separator && (this.options.useGrouping = !1), this.el = "string" == typeof i ? document.getElementById(i) : i, this.el ? this.printValue(this.startVal) : this.error = "[CountUp] target is null or undefined", "undefined" != typeof window && this.options.enableScrollSpy && (this.error ? console.error(this.error, i) : (window.onScrollFns = window.onScrollFns || [], window.onScrollFns.push(function () {
+            return a.handleScroll(a);
+          }), window.onscroll = function () {
+            window.onScrollFns.forEach(function (t) {
+              return t();
+            });
+          }, this.handleScroll(this)));
         }
 
-        return t.prototype.determineDirectionAndSmartEasing = function () {
+        return i.prototype.handleScroll = function (t) {
+          if (t && window && !t.once) {
+            var i = window.innerHeight + window.scrollY,
+                n = t.el.getBoundingClientRect(),
+                s = n.top + window.pageYOffset,
+                a = n.top + n.height + window.pageYOffset;
+            a < i && a > window.scrollY && t.paused ? (t.paused = !1, setTimeout(function () {
+              return t.start();
+            }, t.options.scrollSpyDelay), t.options.scrollSpyOnce && (t.once = !0)) : (window.scrollY > a || s > i) && !t.paused && t.reset();
+          }
+        }, i.prototype.determineDirectionAndSmartEasing = function () {
           var t = this.finalEndVal ? this.finalEndVal : this.endVal;
           this.countDown = this.startVal > t;
           var i = t - this.startVal;
 
-          if (Math.abs(i) > this.options.smartEasingThreshold) {
+          if (Math.abs(i) > this.options.smartEasingThreshold && this.options.useEasing) {
             this.finalEndVal = t;
-            var a = this.countDown ? 1 : -1;
-            this.endVal = t + a * this.options.smartEasingAmount, this.duration = this.duration / 2;
+            var n = this.countDown ? 1 : -1;
+            this.endVal = t + n * this.options.smartEasingAmount, this.duration = this.duration / 2;
           } else this.endVal = t, this.finalEndVal = null;
 
-          this.finalEndVal ? this.useEasing = !1 : this.useEasing = this.options.useEasing;
-        }, t.prototype.start = function (t) {
-          this.error || (this.callback = t, this.duration > 0 ? (this.determineDirectionAndSmartEasing(), this.paused = !1, this.rAF = requestAnimationFrame(this.count)) : this.printValue(this.endVal));
-        }, t.prototype.pauseResume = function () {
+          null !== this.finalEndVal ? this.useEasing = !1 : this.useEasing = this.options.useEasing;
+        }, i.prototype.start = function (t) {
+          this.error || (this.options.onStartCallback && this.options.onStartCallback(), t && (this.options.onCompleteCallback = t), this.duration > 0 ? (this.determineDirectionAndSmartEasing(), this.paused = !1, this.rAF = requestAnimationFrame(this.count)) : this.printValue(this.endVal));
+        }, i.prototype.pauseResume = function () {
           this.paused ? (this.startTime = null, this.duration = this.remaining, this.startVal = this.frameVal, this.determineDirectionAndSmartEasing(), this.rAF = requestAnimationFrame(this.count)) : cancelAnimationFrame(this.rAF), this.paused = !this.paused;
-        }, t.prototype.reset = function () {
+        }, i.prototype.reset = function () {
           cancelAnimationFrame(this.rAF), this.paused = !0, this.resetDuration(), this.startVal = this.validateValue(this.options.startVal), this.frameVal = this.startVal, this.printValue(this.startVal);
-        }, t.prototype.update = function (t) {
-          cancelAnimationFrame(this.rAF), this.startTime = null, this.endVal = this.validateValue(t), this.endVal !== this.frameVal && (this.startVal = this.frameVal, this.finalEndVal || this.resetDuration(), this.finalEndVal = null, this.determineDirectionAndSmartEasing(), this.rAF = requestAnimationFrame(this.count));
-        }, t.prototype.printValue = function (t) {
-          var i = this.formattingFn(t);
-          "INPUT" === this.el.tagName ? this.el.value = i : "text" === this.el.tagName || "tspan" === this.el.tagName ? this.el.textContent = i : this.el.innerHTML = i;
-        }, t.prototype.ensureNumber = function (t) {
+        }, i.prototype.update = function (t) {
+          cancelAnimationFrame(this.rAF), this.startTime = null, this.endVal = this.validateValue(t), this.endVal !== this.frameVal && (this.startVal = this.frameVal, null == this.finalEndVal && this.resetDuration(), this.finalEndVal = null, this.determineDirectionAndSmartEasing(), this.rAF = requestAnimationFrame(this.count));
+        }, i.prototype.printValue = function (t) {
+          var i;
+
+          if (this.el) {
+            var n = this.formattingFn(t);
+            if (null === (i = this.options.plugin) || void 0 === i ? void 0 : i.render) this.options.plugin.render(this.el, n);else if ("INPUT" === this.el.tagName) this.el.value = n;else "text" === this.el.tagName || "tspan" === this.el.tagName ? this.el.textContent = n : this.el.innerHTML = n;
+          }
+        }, i.prototype.ensureNumber = function (t) {
           return "number" == typeof t && !isNaN(t);
-        }, t.prototype.validateValue = function (t) {
+        }, i.prototype.validateValue = function (t) {
           var i = Number(t);
-          return this.ensureNumber(i) ? i : (this.error = "[CountUp] invalid start or end value: " + t, null);
-        }, t.prototype.resetDuration = function () {
+          return this.ensureNumber(i) ? i : (this.error = "[CountUp] invalid start or end value: ".concat(t), null);
+        }, i.prototype.resetDuration = function () {
           this.startTime = null, this.duration = 1e3 * Number(this.options.duration), this.remaining = this.duration;
-        }, t;
+        }, i;
       }();
       /***/
 
     },
 
     /***/
-    "HGz6": function HGz6(module, __webpack_exports__, __webpack_require__) {
+    "HGz6":
+    /*!******************************************************************************!*\
+      !*** ./src/app/components/pages/home-two/quote/quote.component.ngfactory.js ***!
+      \******************************************************************************/
+
+    /*! exports provided: RenderType_QuoteComponent, View_QuoteComponent_0, View_QuoteComponent_Host_0, QuoteComponentNgFactory */
+
+    /***/
+    function HGz6(module, __webpack_exports__, __webpack_require__) {
       "use strict";
 
       __webpack_require__.r(__webpack_exports__);
@@ -810,7 +887,7 @@
       }
 
       function View_QuoteComponent_0(_l) {
-        return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, null, null, 82, "div", [["class", "section"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](1, 0, null, null, 81, "div", [["class", "container"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](2, 0, null, null, 80, "div", [["class", "row justify-content-end position-relative"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](3, 0, null, null, 1, "div", [["class", "sigma_contact-image style-6 d-none d-lg-block"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](4, 0, null, null, 0, "img", [["alt", "img"], ["src", "assets/img/home-2/contactame.jpg"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](5, 0, null, null, 77, "div", [["class", "col-lg-8"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](6, 0, null, null, 76, "div", [["class", "sigma_form style-6"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](7, 0, null, null, 4, "div", [["class", "section-title"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](8, 0, null, null, 1, "h3", [["class", "title mb-1 text-white"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](-1, null, ["Cont\xE1cteme"])), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](10, 0, null, null, 1, "p", [["class", "text-white"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](-1, null, ["Estar\xE9 encantado de atenderte"])), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](12, 0, null, null, 70, "form", [["novalidate", ""]], [[2, "ng-untouched", null], [2, "ng-touched", null], [2, "ng-pristine", null], [2, "ng-dirty", null], [2, "ng-valid", null], [2, "ng-invalid", null], [2, "ng-pending", null]], [[null, "submit"], [null, "reset"]], function (_v, en, $event) {
+        return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, null, null, 82, "div", [["class", "section"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](1, 0, null, null, 81, "div", [["class", "container"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](2, 0, null, null, 80, "div", [["class", "row justify-content-end position-relative"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](3, 0, null, null, 1, "div", [["class", "sigma_contact-image style-6 d-none d-lg-block"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](4, 0, null, null, 0, "img", [["alt", "img"], ["src", "assets/img/home-2/contactame.jpeg"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](5, 0, null, null, 77, "div", [["class", "col-lg-8"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](6, 0, null, null, 76, "div", [["class", "sigma_form style-6"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](7, 0, null, null, 4, "div", [["class", "section-title"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](8, 0, null, null, 1, "h3", [["class", "title mb-1 text-white"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](-1, null, ["Cont\xE1cteme"])), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](10, 0, null, null, 1, "p", [["class", "text-white"]], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](-1, null, ["Estar\xE9 encantado de atenderte"])), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](12, 0, null, null, 70, "form", [["novalidate", ""]], [[2, "ng-untouched", null], [2, "ng-touched", null], [2, "ng-pristine", null], [2, "ng-dirty", null], [2, "ng-valid", null], [2, "ng-invalid", null], [2, "ng-pending", null]], [[null, "submit"], [null, "reset"]], function (_v, en, $event) {
           var ad = true;
 
           if ("submit" === en) {
@@ -1216,7 +1293,15 @@
     },
 
     /***/
-    "IVBy": function IVBy(module, __webpack_exports__, __webpack_require__) {
+    "IVBy":
+    /*!********************************************************************************!*\
+      !*** ./src/app/components/pages/home-two/why-us/why-us.component.ngfactory.js ***!
+      \********************************************************************************/
+
+    /*! exports provided: RenderType_WhyUsComponent, View_WhyUsComponent_0, View_WhyUsComponent_Host_0, WhyUsComponentNgFactory */
+
+    /***/
+    function IVBy(module, __webpack_exports__, __webpack_require__) {
       "use strict";
 
       __webpack_require__.r(__webpack_exports__);
@@ -1335,13 +1420,29 @@
     },
 
     /***/
-    "LvX5": function LvX5(module) {
+    "LvX5":
+    /*!********************************************!*\
+      !*** ./src/app/components/data/whyus.json ***!
+      \********************************************/
+
+    /*! exports provided: 0, default */
+
+    /***/
+    function LvX5(module) {
       module.exports = JSON.parse("[{\"id\":1,\"title\":\"Agenda tu cita para un mejor servicio\",\"icon\":\"flaticon-heartbeat\",\"text\":\"\"}]");
       /***/
     },
 
     /***/
-    "N9LS": function N9LS(module, __webpack_exports__, __webpack_require__) {
+    "N9LS":
+    /*!************************************************************************************!*\
+      !*** ./src/app/components/pages/home-two/services/services.component.ngfactory.js ***!
+      \************************************************************************************/
+
+    /*! exports provided: RenderType_ServicesComponent, View_ServicesComponent_0, View_ServicesComponent_Host_0, ServicesComponentNgFactory */
+
+    /***/
+    function N9LS(module, __webpack_exports__, __webpack_require__) {
       "use strict";
 
       __webpack_require__.r(__webpack_exports__);
@@ -1501,7 +1602,15 @@
     },
 
     /***/
-    "Qzb+": function Qzb(module, __webpack_exports__, __webpack_require__) {
+    "Qzb+":
+    /*!**************************************************************************!*\
+      !*** ./src/app/components/pages/home-two/services/services.component.ts ***!
+      \**************************************************************************/
+
+    /*! exports provided: ServicesComponent */
+
+    /***/
+    function Qzb(module, __webpack_exports__, __webpack_require__) {
       "use strict";
 
       __webpack_require__.r(__webpack_exports__);
@@ -1537,29 +1646,25 @@
       "iInd");
 
       var ServicesComponent = /*#__PURE__*/function (_src_app_components_h2) {
-        _inherits(ServicesComponent, _src_app_components_h2);
-
-        var _super2 = _createSuper(ServicesComponent);
-
         function ServicesComponent(whatsAppService, route) {
           var _this2;
 
           _classCallCheck(this, ServicesComponent);
 
-          _this2 = _super2.call(this, route);
+          _this2 = _callSuper(this, ServicesComponent, [route]);
           _this2.whatsAppService = whatsAppService;
           _this2.whatsAppUrl = '';
           return _this2;
         }
 
-        _createClass(ServicesComponent, [{
+        _inherits(ServicesComponent, _src_app_components_h2);
+
+        return _createClass(ServicesComponent, [{
           key: "ngOnInit",
           value: function ngOnInit() {
             this.whatsAppUrl = this.whatsAppService.getWhatsAppUrl();
           }
         }]);
-
-        return ServicesComponent;
       }(src_app_components_helper_service_service_helper_service__WEBPACK_IMPORTED_MODULE_0__["ServiceHelperService"]);
 
       ServicesComponent.ɵprov = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineInjectable"]({
@@ -1573,7 +1678,15 @@
     },
 
     /***/
-    "XPxg": function XPxg(module, __webpack_exports__, __webpack_require__) {
+    "XPxg":
+    /*!*************************************************************************************!*\
+      !*** ./src/app/components/pages/home-two/quote/quote.component.css.shim.ngstyle.js ***!
+      \*************************************************************************************/
+
+    /*! exports provided: styles */
+
+    /***/
+    function XPxg(module, __webpack_exports__, __webpack_require__) {
       "use strict";
 
       __webpack_require__.r(__webpack_exports__);
@@ -1591,12 +1704,20 @@
        */
 
 
-      var styles = [".hidden[_ngcontent-%COMP%]{\r\n    display: none;\r\n  }\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInF1b3RlLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7SUFDSSxhQUFhO0VBQ2YiLCJmaWxlIjoicXVvdGUuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi5oaWRkZW57XHJcbiAgICBkaXNwbGF5OiBub25lO1xyXG4gIH0iXX0= */"];
+      var styles = [".hidden[_ngcontent-%COMP%]{\n    display: none;\n  }\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInF1b3RlLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7SUFDSSxhQUFhO0VBQ2YiLCJmaWxlIjoicXVvdGUuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi5oaWRkZW57XG4gICAgZGlzcGxheTogbm9uZTtcbiAgfSJdfQ== */"];
       /***/
     },
 
     /***/
-    "ZJz2": function ZJz2(module, __webpack_exports__, __webpack_require__) {
+    "ZJz2":
+    /*!**********************************************************************!*\
+      !*** ./src/app/components/pages/home-two/home-two-routing.module.ts ***!
+      \**********************************************************************/
+
+    /*! exports provided: HomeTwoRoutingModule */
+
+    /***/
+    function ZJz2(module, __webpack_exports__, __webpack_require__) {
       "use strict";
 
       __webpack_require__.r(__webpack_exports__);
@@ -1618,15 +1739,23 @@
         component: _home_two_component__WEBPACK_IMPORTED_MODULE_0__["HomeTwoComponent"]
       }];
 
-      var HomeTwoRoutingModule = function HomeTwoRoutingModule() {
+      var HomeTwoRoutingModule = /*#__PURE__*/_createClass(function HomeTwoRoutingModule() {
         _classCallCheck(this, HomeTwoRoutingModule);
-      };
+      });
       /***/
 
     },
 
     /***/
-    "eXyG": function eXyG(module, __webpack_exports__, __webpack_require__) {
+    "eXyG":
+    /*!********************************************************************************************!*\
+      !*** ./src/app/components/pages/home-two/services-two/services-two.component.ngfactory.js ***!
+      \********************************************************************************************/
+
+    /*! exports provided: RenderType_ServicesTwoComponent, View_ServicesTwoComponent_0, View_ServicesTwoComponent_Host_0, ServicesTwoComponentNgFactory */
+
+    /***/
+    function eXyG(module, __webpack_exports__, __webpack_require__) {
       "use strict";
 
       __webpack_require__.r(__webpack_exports__);
@@ -1761,7 +1890,15 @@
     },
 
     /***/
-    "ggGP": function ggGP(module, __webpack_exports__, __webpack_require__) {
+    "ggGP":
+    /*!*****************************************************************!*\
+      !*** ./src/app/components/pages/home-two/home-two.component.ts ***!
+      \*****************************************************************/
+
+    /*! exports provided: HomeTwoComponent */
+
+    /***/
+    function ggGP(module, __webpack_exports__, __webpack_require__) {
       "use strict";
 
       __webpack_require__.r(__webpack_exports__);
@@ -1777,19 +1914,25 @@
           _classCallCheck(this, HomeTwoComponent);
         }
 
-        _createClass(HomeTwoComponent, [{
+        return _createClass(HomeTwoComponent, [{
           key: "ngOnInit",
           value: function ngOnInit() {}
         }]);
-
-        return HomeTwoComponent;
       }();
       /***/
 
     },
 
     /***/
-    "iaqC": function iaqC(module, __webpack_exports__, __webpack_require__) {
+    "iaqC":
+    /*!***************************************************************************************!*\
+      !*** ./src/app/components/pages/home-two/why-us/why-us.component.css.shim.ngstyle.js ***!
+      \***************************************************************************************/
+
+    /*! exports provided: styles */
+
+    /***/
+    function iaqC(module, __webpack_exports__, __webpack_require__) {
       "use strict";
 
       __webpack_require__.r(__webpack_exports__);
@@ -1812,7 +1955,15 @@
     },
 
     /***/
-    "jDZj": function jDZj(module, __webpack_exports__, __webpack_require__) {
+    "jDZj":
+    /*!*******************************************************************************************!*\
+      !*** ./src/app/components/pages/home-two/services/services.component.css.shim.ngstyle.js ***!
+      \*******************************************************************************************/
+
+    /*! exports provided: styles */
+
+    /***/
+    function jDZj(module, __webpack_exports__, __webpack_require__) {
       "use strict";
 
       __webpack_require__.r(__webpack_exports__);
@@ -1835,7 +1986,15 @@
     },
 
     /***/
-    "mD0L": function mD0L(module, __webpack_exports__, __webpack_require__) {
+    "mD0L":
+    /*!**********************************************************************!*\
+      !*** ./src/app/components/pages/home-two/why-us/why-us.component.ts ***!
+      \**********************************************************************/
+
+    /*! exports provided: WhyUsComponent */
+
+    /***/
+    function mD0L(module, __webpack_exports__, __webpack_require__) {
       "use strict";
 
       __webpack_require__.r(__webpack_exports__);
@@ -1865,21 +2024,27 @@
           this.whatsAppUrl = '';
         }
 
-        _createClass(WhyUsComponent, [{
+        return _createClass(WhyUsComponent, [{
           key: "ngOnInit",
           value: function ngOnInit() {
             this.whatsAppUrl = this.whatsAppService.getWhatsAppUrl();
           }
         }]);
-
-        return WhyUsComponent;
       }();
       /***/
 
     },
 
     /***/
-    "miJQ": function miJQ(module, __webpack_exports__, __webpack_require__) {
+    "miJQ":
+    /*!**********************************************************!*\
+      !*** ./node_modules/ngx-countup/fesm2015/ngx-countup.js ***!
+      \**********************************************************/
+
+    /*! exports provided: CountUpDirective, CountUpModule */
+
+    /***/
+    function miJQ(module, __webpack_exports__, __webpack_require__) {
       "use strict";
 
       __webpack_require__.r(__webpack_exports__);
@@ -1933,7 +2098,7 @@
         } // Re-animate if preference is set.
 
 
-        _createClass(CountUpDirective, [{
+        return _createClass(CountUpDirective, [{
           key: "onClick",
           value: function onClick() {
             if (this.reanimateOnClick) {
@@ -1976,8 +2141,6 @@
             });
           }
         }]);
-
-        return CountUpDirective;
       }();
 
       CountUpDirective.ctorParameters = function () {
@@ -2003,9 +2166,9 @@
         selector: '[countUp]'
       }), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__param"])(2, Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Inject"])(_angular_core__WEBPACK_IMPORTED_MODULE_1__["PLATFORM_ID"]))], CountUpDirective);
 
-      var CountUpModule = function CountUpModule() {
+      var CountUpModule = /*#__PURE__*/_createClass(function CountUpModule() {
         _classCallCheck(this, CountUpModule);
-      };
+      });
 
       CountUpModule = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"])({
         imports: [],
@@ -2025,7 +2188,15 @@
     },
 
     /***/
-    "nFaW": function nFaW(module, __webpack_exports__, __webpack_require__) {
+    "nFaW":
+    /*!********************************************************************************!*\
+      !*** ./src/app/components/pages/home-two/banner/banner.component.ngfactory.js ***!
+      \********************************************************************************/
+
+    /*! exports provided: RenderType_BannerComponent, View_BannerComponent_0, View_BannerComponent_Host_0, BannerComponentNgFactory */
+
+    /***/
+    function nFaW(module, __webpack_exports__, __webpack_require__) {
       "use strict";
 
       __webpack_require__.r(__webpack_exports__);
@@ -2147,7 +2318,15 @@
     },
 
     /***/
-    "tmeS": function tmeS(module, __webpack_exports__, __webpack_require__) {
+    "tmeS":
+    /*!***************************************************************************************!*\
+      !*** ./src/app/components/pages/home-two/banner/banner.component.css.shim.ngstyle.js ***!
+      \***************************************************************************************/
+
+    /*! exports provided: styles */
+
+    /***/
+    function tmeS(module, __webpack_exports__, __webpack_require__) {
       "use strict";
 
       __webpack_require__.r(__webpack_exports__);
@@ -2170,7 +2349,15 @@
     },
 
     /***/
-    "vcWG": function vcWG(module, __webpack_exports__, __webpack_require__) {
+    "vcWG":
+    /*!***************************************************************************************************!*\
+      !*** ./src/app/components/pages/home-two/services-two/services-two.component.css.shim.ngstyle.js ***!
+      \***************************************************************************************************/
+
+    /*! exports provided: styles */
+
+    /***/
+    function vcWG(module, __webpack_exports__, __webpack_require__) {
       "use strict";
 
       __webpack_require__.r(__webpack_exports__);
@@ -2193,7 +2380,15 @@
     },
 
     /***/
-    "yLVk": function yLVk(module, __webpack_exports__, __webpack_require__) {
+    "yLVk":
+    /*!******************************************************************!*\
+      !*** ./node_modules/ngx-countup/node_modules/tslib/tslib.es6.js ***!
+      \******************************************************************/
+
+    /*! exports provided: __extends, __assign, __rest, __decorate, __param, __metadata, __awaiter, __generator, __createBinding, __exportStar, __values, __read, __spread, __spreadArrays, __await, __asyncGenerator, __asyncDelegator, __asyncValues, __makeTemplateObject, __importStar, __importDefault, __classPrivateFieldGet, __classPrivateFieldSet */
+
+    /***/
+    function yLVk(module, __webpack_exports__, __webpack_require__) {
       "use strict";
 
       __webpack_require__.r(__webpack_exports__);
@@ -2359,9 +2554,7 @@
         } instanceof Array && function (d, b) {
           d.__proto__ = b;
         } || function (d, b) {
-          for (var p in b) {
-            if (b.hasOwnProperty(p)) d[p] = b[p];
-          }
+          for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
         };
 
         return _extendStatics(d, b);
@@ -2382,9 +2575,7 @@
           for (var s, i = 1, n = arguments.length; i < n; i++) {
             s = arguments[i];
 
-            for (var p in s) {
-              if (Object.prototype.hasOwnProperty.call(s, p)) t[p] = s[p];
-            }
+            for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p)) t[p] = s[p];
           }
 
           return t;
@@ -2396,9 +2587,7 @@
       function __rest(s, e) {
         var t = {};
 
-        for (var p in s) {
-          if (Object.prototype.hasOwnProperty.call(s, p) && e.indexOf(p) < 0) t[p] = s[p];
-        }
+        for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p) && e.indexOf(p) < 0) t[p] = s[p];
 
         if (s != null && typeof Object.getOwnPropertySymbols === "function") for (var i = 0, p = Object.getOwnPropertySymbols(s); i < p.length; i++) {
           if (e.indexOf(p[i]) < 0 && Object.prototype.propertyIsEnumerable.call(s, p[i])) t[p[i]] = s[p[i]];
@@ -2410,9 +2599,7 @@
         var c = arguments.length,
             r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc,
             d;
-        if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);else for (var i = decorators.length - 1; i >= 0; i--) {
-          if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-        }
+        if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
         return c > 3 && r && Object.defineProperty(target, key, r), r;
       }
 
@@ -2489,76 +2676,74 @@
         function step(op) {
           if (f) throw new TypeError("Generator is already executing.");
 
-          while (_) {
-            try {
-              if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;
-              if (y = 0, t) op = [op[0] & 2, t.value];
+          while (_) try {
+            if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;
+            if (y = 0, t) op = [op[0] & 2, t.value];
 
-              switch (op[0]) {
-                case 0:
-                case 1:
+            switch (op[0]) {
+              case 0:
+              case 1:
+                t = op;
+                break;
+
+              case 4:
+                _.label++;
+                return {
+                  value: op[1],
+                  done: false
+                };
+
+              case 5:
+                _.label++;
+                y = op[1];
+                op = [0];
+                continue;
+
+              case 7:
+                op = _.ops.pop();
+
+                _.trys.pop();
+
+                continue;
+
+              default:
+                if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) {
+                  _ = 0;
+                  continue;
+                }
+
+                if (op[0] === 3 && (!t || op[1] > t[0] && op[1] < t[3])) {
+                  _.label = op[1];
+                  break;
+                }
+
+                if (op[0] === 6 && _.label < t[1]) {
+                  _.label = t[1];
                   t = op;
                   break;
+                }
 
-                case 4:
-                  _.label++;
-                  return {
-                    value: op[1],
-                    done: false
-                  };
+                if (t && _.label < t[2]) {
+                  _.label = t[2];
 
-                case 5:
-                  _.label++;
-                  y = op[1];
-                  op = [0];
-                  continue;
+                  _.ops.push(op);
 
-                case 7:
-                  op = _.ops.pop();
+                  break;
+                }
 
-                  _.trys.pop();
+                if (t[2]) _.ops.pop();
 
-                  continue;
+                _.trys.pop();
 
-                default:
-                  if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) {
-                    _ = 0;
-                    continue;
-                  }
-
-                  if (op[0] === 3 && (!t || op[1] > t[0] && op[1] < t[3])) {
-                    _.label = op[1];
-                    break;
-                  }
-
-                  if (op[0] === 6 && _.label < t[1]) {
-                    _.label = t[1];
-                    t = op;
-                    break;
-                  }
-
-                  if (t && _.label < t[2]) {
-                    _.label = t[2];
-
-                    _.ops.push(op);
-
-                    break;
-                  }
-
-                  if (t[2]) _.ops.pop();
-
-                  _.trys.pop();
-
-                  continue;
-              }
-
-              op = body.call(thisArg, _);
-            } catch (e) {
-              op = [6, e];
-              y = 0;
-            } finally {
-              f = t = 0;
+                continue;
             }
+
+            op = body.call(thisArg, _);
+          } catch (e) {
+            op = [6, e];
+            y = 0;
+          } finally {
+            f = t = 0;
           }
 
           if (op[0] & 5) throw op[1];
@@ -2575,9 +2760,7 @@
       }
 
       function __exportStar(m, exports) {
-        for (var p in m) {
-          if (p !== "default" && !exports.hasOwnProperty(p)) exports[p] = m[p];
-        }
+        for (var p in m) if (p !== "default" && !exports.hasOwnProperty(p)) exports[p] = m[p];
       }
 
       function __values(o) {
@@ -2606,9 +2789,7 @@
             e;
 
         try {
-          while ((n === void 0 || n-- > 0) && !(r = i.next()).done) {
-            ar.push(r.value);
-          }
+          while ((n === void 0 || n-- > 0) && !(r = i.next()).done) ar.push(r.value);
         } catch (error) {
           e = {
             error: error
@@ -2625,23 +2806,15 @@
       }
 
       function __spread() {
-        for (var ar = [], i = 0; i < arguments.length; i++) {
-          ar = ar.concat(__read(arguments[i]));
-        }
+        for (var ar = [], i = 0; i < arguments.length; i++) ar = ar.concat(__read(arguments[i]));
 
         return ar;
       }
 
       function __spreadArrays() {
-        for (var s = 0, i = 0, il = arguments.length; i < il; i++) {
-          s += arguments[i].length;
-        }
+        for (var s = 0, i = 0, il = arguments.length; i < il; i++) s += arguments[i].length;
 
-        for (var r = Array(s), k = 0, i = 0; i < il; i++) {
-          for (var a = arguments[i], j = 0, jl = a.length; j < jl; j++, k++) {
-            r[k] = a[j];
-          }
-        }
+        for (var r = Array(s), k = 0, i = 0; i < il; i++) for (var a = arguments[i], j = 0, jl = a.length; j < jl; j++, k++) r[k] = a[j];
 
         return r;
       }
@@ -2755,9 +2928,7 @@
       function __importStar(mod) {
         if (mod && mod.__esModule) return mod;
         var result = {};
-        if (mod != null) for (var k in mod) {
-          if (Object.hasOwnProperty.call(mod, k)) result[k] = mod[k];
-        }
+        if (mod != null) for (var k in mod) if (Object.hasOwnProperty.call(mod, k)) result[k] = mod[k];
         result["default"] = mod;
         return result;
       }
@@ -2789,7 +2960,15 @@
     },
 
     /***/
-    "zXk4": function zXk4(module, __webpack_exports__, __webpack_require__) {
+    "zXk4":
+    /*!**********************************************************************!*\
+      !*** ./src/app/components/pages/home-two/banner/banner.component.ts ***!
+      \**********************************************************************/
+
+    /*! exports provided: BannerComponent */
+
+    /***/
+    function zXk4(module, __webpack_exports__, __webpack_require__) {
       "use strict";
 
       __webpack_require__.r(__webpack_exports__);
@@ -2808,21 +2987,27 @@
           this.whatsAppUrl = '';
         }
 
-        _createClass(BannerComponent, [{
+        return _createClass(BannerComponent, [{
           key: "ngOnInit",
           value: function ngOnInit() {
             this.whatsAppUrl = this.whatsAppService.getWhatsAppUrl();
           }
         }]);
-
-        return BannerComponent;
       }();
       /***/
 
     },
 
     /***/
-    "zk4f": function zk4f(module, __webpack_exports__, __webpack_require__) {
+    "zk4f":
+    /*!**************************************************************!*\
+      !*** ./src/app/components/pages/home-two/home-two.module.ts ***!
+      \**************************************************************/
+
+    /*! exports provided: HomeTwoModule */
+
+    /***/
+    function zk4f(module, __webpack_exports__, __webpack_require__) {
       "use strict";
 
       __webpack_require__.r(__webpack_exports__);
@@ -2833,9 +3018,9 @@
         return HomeTwoModule;
       });
 
-      var HomeTwoModule = function HomeTwoModule() {
+      var HomeTwoModule = /*#__PURE__*/_createClass(function HomeTwoModule() {
         _classCallCheck(this, HomeTwoModule);
-      };
+      });
       /***/
 
     }
